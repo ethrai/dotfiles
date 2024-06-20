@@ -2,9 +2,9 @@ return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
 	},
-  {
-    "saadparwaiz1/cmp_luasnip",
-  },
+	{
+		"saadparwaiz1/cmp_luasnip",
+	},
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = {
@@ -13,6 +13,9 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-path",
+		},
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
 			local cmp = require("cmp")
@@ -34,10 +37,11 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				sources = cmp.config.sources({
-					{ name = 'nvim_lsp' },
+					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 				}, {
 					{ name = "buffer" },
+					{ name = "path" },
 				}),
 			})
 		end,

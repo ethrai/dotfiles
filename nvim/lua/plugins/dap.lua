@@ -1,7 +1,7 @@
 return {
 		"mfussenegger/nvim-dap",
 		dependencies = {
-			"lemluz/nvim-dap-go",
+			"leoluz/nvim-dap-go",
 		},
 		config = function()
 			require("dap-go").setup()

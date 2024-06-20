@@ -1,0 +1,12 @@
+[user]
+	email = ethrai@proton.me
+	name = Sergei Ryzhko
+[init]
+	defaultBranch=main
+[core]
+	autocrlf = input
+	editor = nvim
+[color]
+	ui = auto
+[pull]
+	rebase = true

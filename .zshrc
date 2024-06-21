@@ -59,10 +59,12 @@ alias l='ls -lah'
 alias zsrc='. ~/.zshrc'
 alias md='mkdir'
 alias clr='clear'
-alias cd='z'
 alias d='docker'
 alias gcs='gh copilot suggest'
 alias v='nvim'
+alias cd='z'
+alias grep='rg'
+alias cat='bat'
 
 # Path variables
 path+="${HOME}/go/bin"
@@ -74,8 +76,8 @@ export PATH
 export EDITOR="/usr/bin/nvim"
 
 # Shell integrations here
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin.json)"
-# eval "$(starship init zsh)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nightowl.json)"
+eval "$(starship init zsh)"
 # fzf
 source <(fzf --zsh)
 # zoxide

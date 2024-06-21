@@ -1,29 +1,65 @@
-local map = vim.keymap.set
-local opts = { silent = true }
+require "nvchad.mappings"
 
-map("n", ";", ":", {})
+local set = vim.keymap.set
 
-map("n", "<leader>n", ":nohl<CR>")
-map("n", "<leader>w", ":w<CR>")
-map({ "n", "i" }, "<C-s>", ":w<CR>")
-map("n", "<leader>qq", ":q!<CR>")
-map("n", "<leader>qa", ":qa!<CR>")
-map("n", "<leader>a", ":wqa<CR>")
-map({ "n" }, "<leader>c", ":close<CR>")
+local opts = {
+  silent = true,
+}
 
-map({ "i", "n" }, "<C-k>", "<Up>")
-map({ "i", "n" }, "<C-l>", "<Right>")
-map({ "i", "n" }, "<C-j>", "<Down>")
-map({ "i", "n" }, "<C-h>", "<Left>")
+set("n", ";", ":", { desc = "CMD enter command mode" })
 
-map("n", ",f", ":HopPattern<CR>", opts)
-map("n", ",l", ":HopLine<CR>", opts)
-map("n", ",c", ":HopChar1<CR>", opts)
+set("n", "<C-k>", ":TmuxNavigateUp<CR>", opts)
+set("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
+set("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)
+set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
 
--- vimrc
+-- Easymotion
+set("n", ",f", ":HopPattern<CR>", opts)
+set("n", ",l", ":HopLine<CR>", opts)
+set("n", ",c", ":HopChar1<CR>", opts)
 
-vim.cmd([[
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+-- Dap
+local dap = require "dap"
+set("n", "<leader>dt", dap.toggle_breakpoint, { desc = "debug toggle breakpoint" })
+set("n", "<leader>dc", dap.continue, { desc = "debug toggle breakpoint" })
+set("n", "<leader>do", dap.step_over, { desc = "debug step over" })
+set("n", "<leader>di", dap.step_into, { desc = "debug step into" })
+set("n", "<leader>du", dap.step_out, { desc = "debug step out" })
+set("n", "<leader>dq", dap.terminate, { desc = "debug terminate" })
 
-let g:qs_highlight_on_keys = ['f', 'F']
-]])
+set({ "n", "v" }, "<Leader>dh", function()
+  require("dap.ui.widgets").hover()
+end, { desc = "debug open widget " })
+
+set({ "n", "v" }, "<Leader>dp", function()
+  require("dap.ui.widgets").preview()
+end, { desc = "debug preview widget" })
+
+set("n", "<Leader>df", function()
+  local widgets = require "dap.ui.widgets"
+  widgets.centered_float(widgets.frames)
+end)
+
+set("n", "<Leader>dus", function()
+  local widgets = require "dap.ui.widgets"
+  local sidebar = widgets.sidebar(widgets.scopes)
+  sidebar.open()
+end, { desc = "debug open local sidebar" })
+
+set("n", "<Leader>ds", function()
+  local widgets = require "dap.ui.widgets"
+  widgets.centered_float(widgets.scopes)
+end)
+
+-- Dap tests
+set("n", "<leader>dgt", function()
+  require("dap-go").debug_test()
+end, { desc = "debug go test on a cursor" })
+
+set("n", "<leader>dgl", function()
+  require("dap-go").debug_last()
+end, { desc = "debug go test on a cursor" })
+
+-- Gopher nvim
+set("n", "<leader>gsj", "<cmd> GoTagAdd json<CR>", { desc = "Add json struct tag" })
+set("n", "<leader>gsj", "<cmd> GoTagAdd yaml<CR>", { desc = "Add yaml struct tag" })

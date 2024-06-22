@@ -66,6 +66,11 @@ alias cd='z'
 alias grep='rg'
 alias cat='bat'
 
+export XDG_CONFIG_HOME="${HOME}/.config"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
+export DFILES="${HOME}/dotfiles"
+
+export EDITOR="/usr/bin/nvim"
 # Path variables
 path+="${HOME}/go/bin"
 path+="${HOME}/.local/bin"
@@ -73,7 +78,6 @@ path+="${HOME}/.local/share/JetBrains/Toolbox/scripts"
 path+="${HOME}/.cargo/bin"
 export PATH
 
-export EDITOR="/usr/bin/nvim"
 
 # Shell integrations here
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nightowl.json)"

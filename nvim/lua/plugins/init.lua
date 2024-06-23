@@ -28,6 +28,8 @@ local plugins = {
         "golangci-lint",
         "golangci-lint-langserver",
         "gofumpt",
+        "hyprls",
+        "json-lsp",
       },
     },
   },

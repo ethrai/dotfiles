@@ -1,15 +1,15 @@
 * {
   font-family: JetBrainsMono;
   color: #e5e9f0;
-  background: transparent;
 }
 
 #window {
-  background: #1d2021;
+  background: #24283b;
   margin: auto;
   padding: 10px;
   border-radius: 20px;
-  border: 5px solid #33ccff;
+  border: 5px solid #565f89;
+  background: transparent;
 }
 
 #input {
@@ -32,7 +32,7 @@
 }
 
 #entry:selected {
-  background-color: #2e3440;
+  background-color: #414868;
 }
 
 #text {

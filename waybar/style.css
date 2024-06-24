@@ -26,7 +26,6 @@
   font-weight: 400;
   color: @base04;
   background: @base01;
-  background: transparent;
   transition-property: background-color;
   transition-duration: 1s;
   border-bottom: 0px solid #ffffff;

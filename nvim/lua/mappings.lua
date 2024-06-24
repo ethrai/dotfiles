@@ -71,3 +71,7 @@ map(
   "<cmd>Telescope find_files find_command=rg,--hidden,--files<cr>",
   { desc = "telescope find files" }
 )
+
+-- Lsp pickers
+local telescope = require "telescope.builtin"
+map("n", "<leader>fs", telescope.lsp_document_symbols, { desc = "telescope find files" })

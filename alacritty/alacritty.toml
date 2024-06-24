@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/tokyo-night.toml"]
+import = ["~/.config/alacritty/themes/catppuccin_mocha.toml"]
 
 [cursor]
 style = "Block"
@@ -131,7 +131,7 @@ program = "/usr/bin/tmux"
 [window]
 decorations = "none"
 dynamic_padding = false
-opacity = 0.9455
+opacity = 1
 startup_mode = "Maximized"
 title = "Alacritty"
 

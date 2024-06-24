@@ -1,5 +1,4 @@
 local plugins = {
-
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -14,55 +13,20 @@ local plugins = {
       require "configs.lspconfig"
     end,
   },
-
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "html-lsp",
-        "css-lsp",
-        "prettier",
-        "gopls",
-        "golangci-lint",
-        "golangci-lint-langserver",
-        "gofumpt",
-        "hyprls",
-        "json-lsp",
-      },
-    },
+    opts = require "configs.mason",
   },
-
   {
     "nvimtools/none-ls.nvim",
     ft = "go",
     config = function()
-      local null_ls = require "null-ls"
-      null_ls.setup {
-        sources = {
-          null_ls.builtins.diagnostics.golangci_lint,
-          null_ls.builtins.completion.spell,
-        },
-      }
+      require "configs.null-ls"
     end,
   },
-
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "go",
-        "bash",
-        "javascript",
-        "json",
-      },
-    },
+    opts = require "configs.treesitter",
   },
 
   {
@@ -81,20 +45,6 @@ local plugins = {
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
-  },
-  {
-    "terryma/vim-multiple-cursors",
-    lazy = false,
-    -- init = function()
-    --   vim.g.multi_cursor_start_word_key = "<C-n>"
-    --   vim.g.multi_cursor_select_all_word_key = "<A-n>"
-    --   vim.g.multi_cursor_start_key = "g<C-n>"
-    --   vim.g.multi_cursor_select_all_key = "g<A-n>"
-    --   vim.g.multi_cursor_next_key = "<C-n>"
-    --   vim.g.multi_cursor_prev_key = "<C-p>"
-    --   vim.g.multi_cursor_skip_key = "<C-x>"
-    --   vim.g.multi_cursor_quit_key = "<Esc>"
-    -- end,
   },
   {
     "kylechui/nvim-surround",
@@ -145,6 +95,36 @@ local plugins = {
     -- (optional) will update plugin's deps on every update
     build = function()
       vim.cmd.GoInstallDeps()
+    end,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("telescope").setup {
+        defaults = {
+          vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--no-ignore",
+            "--hidden",
+          },
+        },
+      }
+    end,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    config = function()
+      require("nvim-tree").setup {
+        filters = {
+          dotfiles = true,
+        },
+      }
     end,
   },
 }

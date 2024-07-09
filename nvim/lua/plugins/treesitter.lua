@@ -17,6 +17,7 @@ return {
       "yaml",
       "json",
       "javascript",
+      "printf",
       -- add more arguments for adding more treesitter parsers
     },
   },

@@ -12,6 +12,10 @@ return {
         "gopls",
         "taplo",
         "pyright",
+        "dockerls",
+        "docker_compose_language_service",
+        "hypr",
+        "yamlls",
         -- add more arguments for adding more language servers
       },
     },

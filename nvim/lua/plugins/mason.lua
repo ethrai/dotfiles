@@ -16,6 +16,9 @@ return {
         "docker_compose_language_service",
         "hypr",
         "yamlls",
+        "jsonls",
+        "bashls",
+        "shfmt",
         -- add more arguments for adding more language servers
       },
     },
@@ -33,6 +36,7 @@ return {
         "golangci-lint",
         "gofumpt",
         "black",
+        "shellcheck",
       },
     },
   },

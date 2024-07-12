@@ -7,7 +7,7 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
-source "${HOME}/.zsh/catppuccin-suggestions.zsh"
+# source "${HOME}/.zsh/catppuccin-suggestions.zsh"
 
 # Enable plugins
 zinit light zsh-users/zsh-syntax-highlighting

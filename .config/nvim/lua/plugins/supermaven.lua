@@ -3,9 +3,11 @@ return {
   config = function()
     require("supermaven-nvim").setup {
       keymaps = {
-        accept_suggestion = "<Tab>",
+        accept_suggestion = "<C-f>",
         clear_suggestion = "<C-n>",
         -- accept_word = "<C-j>",
+        -- accept_line = "<C-k>",
+        -- accept_buffer = "<C-l>",
       },
       ignore_filetypes = { cpp = true },
       log_level = "off", -- set to "off" to disable logging completely

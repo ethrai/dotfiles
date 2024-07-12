@@ -11,7 +11,7 @@ return {
         TRACE = "✎",
         WARN = "",
       },
-      level = 0,
+      level = 4,
       minimum_width = 50,
       render = "default",
       stages = "fade",

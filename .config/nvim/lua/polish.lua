@@ -7,11 +7,12 @@
 -- Set up custom filetypes
 vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 vim.keymap.set("n", "gp", "`[v`]", { silent = true })
+vim.keymap.set("n", "P", '"0p', { silent = true })
 -- nnoremap gp `[v`]
 vim.filetype.add {
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 }
 
-require("catppuccin").setup {
-  transparent_background = true,
-}
+-- require("catppuccin").setup {
+--   transparent_background = true,
+-- }

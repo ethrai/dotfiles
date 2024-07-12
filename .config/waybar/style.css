@@ -59,6 +59,7 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #clock,
+#power-profiles-daemon,
 #tray {
   border-radius: 4px;
   margin: 3px 3px;
@@ -81,47 +82,51 @@ window#waybar.hidden {
 /* } */
 
 #memory {
-  background-color: #fab387;
+  background-color: @flamingo;
 }
 
 #battery {
-  background-color: #f38ba8;
+  background-color: @red;
+}
+
+#power-profiles-daemon {
+  background-color: @sky;
+  padding-right: 17px;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
   background-color: #ff0000;
-  color: #FFFF00;
+  color: #ffff00;
 }
 
 #battery.charging {
-  background-color: #a6e3a1;
+  background-color: @green;
   color: #181825;
 }
 
 #backlight {
-  background-color: #fab387;
+  background-color: @flamingo;
 }
 
 #pulseaudio {
-  background-color: #f9e2af;
+  background-color: @yellow;
 }
 
 #network {
-  background-color: #94e2d5;
+  background-color: @teal;
   padding-right: 17px;
 }
 
 #clock {
   font-family: Iosevka Nerd Font;
-  background-color: #cba6f7;
+  background-color: @lavender;
 }
 
 #custom-power {
-  background-color: #f2cdcd;
+  background-color: @maroon;
 }
-
 
 tooltip {
   border-radius: 8px;

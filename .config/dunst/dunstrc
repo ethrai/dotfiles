@@ -1,5 +1,5 @@
 [global]
-font = Iosevka Nerd Font 14
+font = Inter 14
 monitor = 0
 follow = mouse
 width = 320

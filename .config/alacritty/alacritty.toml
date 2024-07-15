@@ -15,22 +15,25 @@ draw_bold_text_with_bright_colors = true
 TERM = "xterm-256color"
 
 [font]
-size = 13
+size = 14
 
 [font.bold]
-family = "Iosevka Nerd Font"
+# family = "IosevkaTerm Nerd Font"
+family = "Iosevka Term SS04"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font"
-style = "Bold"
+# family = "Iosevka Term Nerd Font"
+family = "Iosevka Term SS04"
+style = "Medium Oblique"
 
 [font.italic]
-family = "Iosevka Nerd Font"
-style = "Regular"
+# family = "IosevkaTerm Nerd Font"
+family = "Iosevka Term SS04"
+style = "Oblique"
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "Iosevka Term SS04"
 style = "Regular"
 
 [font.offset]

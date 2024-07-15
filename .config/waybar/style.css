@@ -4,7 +4,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: Iosevka Nerd Font;
+  font-family: Inter;
   font-size: 15px;
 }
 
@@ -60,12 +60,27 @@ window#waybar.hidden {
 #network,
 #clock,
 #power-profiles-daemon,
+#custom-mediaplayer,
+#idle_inhibitor,
+#cpu,
 #tray {
   border-radius: 4px;
   margin: 3px 3px;
   padding: 3px 12px;
-  background-color: #1e1e2e;
+  background-color: @base;
   color: #181825;
+}
+
+#cpu {
+  background-color: @rosewater;
+}
+
+#idle_inhibitor {
+  background-color: @blue;
+}
+
+#custom-mediaplayer {
+  background-color: @pink;
 }
 
 #custom-power {
@@ -120,7 +135,7 @@ window#waybar.hidden {
 }
 
 #clock {
-  font-family: Iosevka Nerd Font;
+  font-family: Inter;
   background-color: @lavender;
 }
 

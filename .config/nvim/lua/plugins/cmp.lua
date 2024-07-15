@@ -7,19 +7,19 @@ return { -- override nvim-cmp plugin
     local cmp = require "cmp"
     -- modify the sources part of the options table
     opts.sources = cmp.config.sources {
-      { name = "nvim_lsp", priority = 1200 },
+      { name = "nvim_lsp", priority = 900 },
       { name = "luasnip", priority = 1000 },
-      { name = "supermaven", priority = 800 },
+      -- { name = "supermaven", priority = 800 },
       { name = "buffer", priority = 500 },
       { name = "path", priority = 250 },
     }
     -- modify the formatting part of the options table
-    opts.formatting = {
-      format = require("lspkind").cmp_format {
-        mode = "symbol_text",
-        maxwidth = 50,
-        symbol_map = { Supermaven = "" },
-      },
-    }
+    -- opts.formatting = {
+    --   format = require("lspkind").cmp_format {
+    --     mode = "symbol_text",
+    --     maxwidth = 50,
+    --     symbol_map = { Supermaven = "" },
+    --   },
+    -- }
   end,
 }

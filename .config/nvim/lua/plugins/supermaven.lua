@@ -5,8 +5,8 @@ return {
       keymaps = {
         accept_suggestion = "<C-f>",
         clear_suggestion = "<C-n>",
-        -- accept_word = "<C-j>",
-        -- accept_line = "<C-k>",
+        accept_word = "<C-j>",
+        accept_line = "<C-k>",
         -- accept_buffer = "<C-l>",
       },
       ignore_filetypes = { cpp = true },

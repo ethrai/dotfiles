@@ -1,3 +1,4 @@
+if not vim.g.vscode then return {} end
 return {
   "vscode-neovim/vscode-multi-cursor.nvim",
   event = "VeryLazy",

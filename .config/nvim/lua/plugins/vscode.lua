@@ -14,7 +14,9 @@ local plugins = {
   "nvim-treesitter-textobjects",
   "nvim-ts-context-commentstring",
   "vscode-neovim/vscode-multi-cursor.nvim",
-  "folke/flash.nvim",
+  "kylechui/nvim-surround",
+  "tpope/vim-surround",
+  -- "folke/flash.nvim",
 }
 
 local Config = require "lazy.core.config"
@@ -36,6 +38,7 @@ return {
           ["<Leader>ff"] = "<CMD>Find<CR>",
           ["<Leader>fw"] = "<CMD>call VSCodeNotify('workbench.action.findInFiles')<CR>",
           ["<Leader>ls"] = "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>",
+          -- ["<Leader>gl"] = "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>",
         },
       },
     },

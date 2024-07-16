@@ -12,7 +12,6 @@ vim.keymap.set("n", "P", '"0p', { silent = true })
 vim.filetype.add {
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 }
-
 -- require("catppuccin").setup {
 --   transparent_background = true,
 -- }

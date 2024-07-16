@@ -30,6 +30,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        showtabline = 2, -- sets vim.opt.showtabline to 2
       },
 
       g = { -- vim.g.<key>

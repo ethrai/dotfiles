@@ -1,6 +1,6 @@
 [global]
 font = Inter 14
-monitor = 0
+monitor = 1
 follow = mouse
 width = 320
 height = 320

@@ -9,7 +9,7 @@
     grey: #6c7086;
 
     width: 600;
-    font: "Iosevka Nerd Font 12";
+    font: "Inter 12";
 }
 
 element-text, element-icon , mode-switcher {

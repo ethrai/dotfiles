@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
@@ -11,12 +18,13 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Enable plugins
 zinit light zsh-users/zsh-syntax-highlighting
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
-# zinit light jeffreytse/zsh-vi-mode
-#
-#
+# zinit ice depth = 1; zinit light jeffreytse/zsh-vi-mode
+
+export VI_MODE_SET_CURSOR=true
 
 # Plugins configuraiton
 # fzf theme for catppuccin
@@ -71,6 +79,7 @@ alias v='nvim'
 alias cd='z'
 alias grep='rg'
 alias cat='bat'
+alias kr='pkill -10 kitty'
 
 export XDG_CONFIG_HOME="${HOME}/.config"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
@@ -86,8 +95,8 @@ export PATH
 
 
 # Shell integrations here
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nightowl.json)"
-eval "$(starship init zsh)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+# eval "$(starship init zsh)"
 # fzf
 source <(fzf --zsh)
 # zoxide
@@ -100,3 +109,6 @@ source /usr/share/nvm/init-nvm.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

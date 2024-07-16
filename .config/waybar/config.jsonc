@@ -1,16 +1,16 @@
 {
   "layer": "top",
+  "output": "HDMI-A-1",
   "position": "top",
   "spacing": 0,
   "modules-left": [
-    "custom/logo",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
   ],
   "modules-center": [
     "clock",
-    "custom/mediaplayer"
   ],
   "modules-right": [
+    "custom/mediaplayer",
     "tray",
     "idle_inhibitor",
     "memory",

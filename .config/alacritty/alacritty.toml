@@ -15,25 +15,22 @@ draw_bold_text_with_bright_colors = true
 TERM = "xterm-256color"
 
 [font]
-size = 12.5
+size = 14
 
 [font.bold]
-# family = "IosevkaTerm Nerd Font"
-family = "Iosevka Term SS04"
+family = "JetbrainsMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-# family = "Iosevka Term Nerd Font"
-family = "Iosevka Term SS04"
-style = "Medium Oblique"
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
 
 [font.italic]
-# family = "IosevkaTerm Nerd Font"
-family = "Iosevka Term SS04"
-style = "Oblique"
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
 
 [font.normal]
-family = "Iosevka Term SS04"
+family = "JetbrainsMono Nerd Font"
 style = "Regular"
 
 [font.offset]
@@ -75,10 +72,10 @@ action = "DecreaseFontSize"
 key = "Minus"
 mods = "Control"
 
-[[keyboard.bindings]]
-action = "ToggleFullscreen"
-key = "F11"
-mods = "None"
+# [[keyboard.bindings]]
+# action = "ToggleFullscreen"
+# key = "F11"
+# mods = "None"
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -142,10 +139,7 @@ title = "Alacritty"
 general = "Alacritty"
 instance = "Alacritty"
 
-[window.dimensions]
-columns = 160
-lines = 40
 
 [window.padding]
-x = 6
-y = 6
+x = 2
+y = 2

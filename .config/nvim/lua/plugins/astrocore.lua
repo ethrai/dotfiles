@@ -29,7 +29,12 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
+        textwidth = 80, -- sets vim.opt.textwidth
+        expandtab = true, -- sets vim.opt.expandtab
+        smartindent = true, -- sets vim.opt.smartindent
+        shiftwidth = 2, -- sets vim.opt.shiftwidth
+        tabstop = 2, -- sets vim.opt.tabstop
         showtabline = 2, -- sets vim.opt.showtabline to 2
       },
 

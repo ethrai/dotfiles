@@ -1,0 +1,8 @@
+source=./conf/mocha.hyprland.conf
+source=./conf/autostart.hyprland.conf
+source=./conf/binds.hyprland.conf
+source=./conf/monitors.hyprland.conf
+source=./conf/env.hyprland.conf
+source=./conf/appearance.hyprland.conf
+source=./conf/input.hyprland.conf
+source=./conf/rules.hyprland.conf

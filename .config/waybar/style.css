@@ -4,8 +4,8 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: JetBrains Mono;
-  font-size: 15px;
+  font-family: 'Noto Sans Condensed SemiBold';
+  font-size: 17px;
 }
 
 window#waybar {
@@ -38,7 +38,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #1e1e2e;
-  background-color: #cdd6f4;
+  background-color: @blue;
 }
 
 #workspaces button:hover {
@@ -53,7 +53,7 @@ window#waybar.hidden {
 }
 
 #memory,
-#custom-power,
+/* #custom-power, */
 #battery,
 #backlight,
 #pulseaudio,
@@ -64,20 +64,21 @@ window#waybar.hidden {
 #idle_inhibitor,
 #cpu,
 #tray {
-  border-radius: 4px;
+  border-radius: 2px;
   margin: 3px 3px;
   padding: 3px 12px;
-  background-color: @base;
+  background-color: @blue;
   color: #181825;
 }
 
-#cpu {
+#idle_inhibitor {
   background-color: @rosewater;
 }
 
-#idle_inhibitor {
-  background-color: @blue;
+#cpu {
+  background-color: @sky;
 }
+
 
 #custom-mediaplayer {
   background-color: @pink;
@@ -97,23 +98,34 @@ window#waybar.hidden {
 /* } */
 
 #memory {
-  background-color: @flamingo;
+  background-color: @mauve;
 }
 
 #battery {
-  background-color: @red;
+  background-color: @green;
 }
 
 #power-profiles-daemon {
-  background-color: @sky;
-  padding-right: 17px;
+  background-color: @red;
+}
+
+#power-profiles-daemon.performance {
+  background-color: @red;
+}
+
+#power-profiles-daemon.balanced {
+  background-color: @yellow;
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: @teal;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-  background-color: #ff0000;
-  color: #ffff00;
+  background-color: @red;
+  color: @yellow;
 }
 
 #battery.charging {
@@ -122,16 +134,16 @@ window#waybar.hidden {
 }
 
 #backlight {
-  background-color: @flamingo;
+  background-color: @maroon;
 }
 
 #pulseaudio {
-  background-color: @yellow;
+  background-color: @peach;
 }
 
 #network {
-  background-color: @teal;
-  padding-right: 17px;
+  background-color: @yellow;
+  /* padding-right: 17px; */
 }
 
 #clock {
@@ -139,16 +151,16 @@ window#waybar.hidden {
 }
 
 #custom-power {
-  background-color: @maroon;
+  background-color: @teal;
 }
 
-tooltip {
-  border-radius: 8px;
+#tooltip {
+  border-radius: 2px;
   padding: 15px;
   background-color: #131822;
 }
 
-tooltip label {
+#tooltip label {
   padding: 5px;
   background-color: #131822;
 }

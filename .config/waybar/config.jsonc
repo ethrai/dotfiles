@@ -1,8 +1,6 @@
 {
   "layer": "top",
-  "output": "HDMI-A-1",
   "position": "top",
-  "spacing": 0,
   "modules-left": [
     "hyprland/workspaces",
   ],
@@ -18,8 +16,8 @@
     "network",
     "pulseaudio",
     "power-profiles-daemon",
-    "battery",
-    "custom/power",
+    "battery"
+    // "custom/power",
   ],
   // "wlr/taskbar": {
   //     "format": "{icon}",
@@ -56,7 +54,7 @@
   },
   "memory": {
     "interval": 5,
-    "format": "{}%󰍛",
+    "format": "{}% ",
     "max-length": 10,
   },
   "tray": {
@@ -90,7 +88,6 @@
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon} 󰂰",
-    "nospacing": 1,
     "tooltip-format": "Volume : {volume}%",
     "format-muted": "󰝟",
     "format-icons": {
@@ -102,7 +99,6 @@
       ],
     },
     "on-click": "pavucontrol",
-    "scroll-step": 1,
   },
   // "custom/logo": {
   //     "format": "  ",
@@ -156,11 +152,11 @@
     },
     "tooltip": false,
   },
-  "custom/power": {
-    "format": "󰤆",
-    "tooltip": false,
-    // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
-  },
+  // "custom/power": {
+  //   "format": "󰤆",
+  //   "tooltip": false,
+  //   // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+  // },
   "custom/mediaplayer": {
     "format": "{icon} {}",
     "return-type": "json",
@@ -181,7 +177,7 @@
     },
   },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% ",
         "tooltip": false
     },
 }

@@ -1,5 +1,5 @@
 [global]
-font = Inter 14
+font = Noto Sans 15 SemiBold
 monitor = 1
 follow = mouse
 width = 320
@@ -38,7 +38,7 @@ icon_path = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/de
 sticky_history = yes
 history_length = 20
 always_run_script = true
-corner_radius = 0
+corner_radius = 4
 ignore_dbusclose = false
 force_xinerama = false
 mouse_left_click = close_current

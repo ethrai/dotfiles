@@ -11,6 +11,7 @@ printf "Installing desktop packages..."
 
 v yay -S --noconfirm --needed \
 	hyprland polkit-kde-agent qt5-wayland \
+	network-manager-applet \
 	hyprcursor hypridle hyprlang hyprlock hyprpaper hyprutils \
 	power-profiles-daemon playerctl pamixer brightnessctl pavucontrol \
 	xdg-desktop-portal-hyprland waybar dunst \
@@ -28,7 +29,8 @@ v yay -S --noconfirm --needed \
 	telegram-desktop catppuccin-cursors-mocha \
 	catppuccin-gtk-theme-mocha kvantum-theme-catppuccin-git \
 	sddm-theme-catppuccin docker docker-compose git curl wget \
-	papirus-icon-theme \
+	papirus-icon-theme glab github-cli httpie \
+	luarocks prettier tree-sitter\
 
 
 v sudo chsh -s "$(which zsh)" "$USER"

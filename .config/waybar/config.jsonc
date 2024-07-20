@@ -1,17 +1,24 @@
 {
   "layer": "top",
+  "margin-bottom": 1,
+  "margin-top": 1,
+  "margin-left": 5,
+  "margin-right": 5,
+  "height": 35,
   "position": "top",
   "modules-left": [
     "hyprland/workspaces",
   ],
   "modules-center": [
-    "clock",
+    "clock"
+    // "custom/mediaplayer",
   ],
   "modules-right": [
-    "custom/mediaplayer",
     "tray",
+    "hyprland/language",
     "idle_inhibitor",
     "memory",
+    "temperature#cpu",
     "cpu",
     "network",
     "pulseaudio",
@@ -27,6 +34,12 @@
   //     "icon-size": 25,
   //     "tooltip-format": "{title}"
   // },
+    "hyprland/language": {
+    "format": "{}",
+    "format-en": "  US",
+    "format-ru": "  RU",
+    "on-click": "hyprctl switchxkblayout evision-usb-device next",
+  },
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
@@ -60,6 +73,15 @@
   "tray": {
     "spacing": 10,
   },
+  "temperature#cpu": {
+    "critical-threshold": 90,
+    "on-click": "kitty --class center-float-large btop",
+    "format-critical": "{icon} {temperatureC}°C",
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""],
+    "tooltip": true,
+    "interval": 2,
+  },
   "clock": {
     "tooltip-format": "{calendar}",
     "format-alt": "  {:%a, %d %b %Y}",
@@ -87,15 +109,13 @@
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} 󰂰",
+    "format-bluetooth": "{volume}% {icon} ",
     "tooltip-format": "Volume : {volume}%",
-    "format-muted": "󰝟",
+    "format-muted": "󰖁",
     "format-icons": {
       "headphone": "",
       "default": [
         "󰖀",
-        "󰕾",
-        ""
       ],
     },
     "on-click": "pavucontrol",
@@ -157,18 +177,20 @@
   //   "tooltip": false,
   //   // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
   // },
-  "custom/mediaplayer": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜",
-    },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null", // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-  },
+  // "custom/mediaplayer": {
+  //   "format": "{icon} {}",
+  //   "return-type": "json",
+  //   "max-length": 40,
+  //   "format-icons": {
+  //     "spotify": "",
+  //     "default": "🎜",
+  //   },
+  //   "escape": true,
+  //   "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null", // Script in resources folder
+  //   "on-click": "playerctl --player=spotify play-pause",
+  //   "on-scroll-up": "playerctl --player=spotify next",
+  //   "on-scroll-down": "playerctl --player=spotify previous",
+  // },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {

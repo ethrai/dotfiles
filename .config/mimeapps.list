@@ -1,1 +1,5 @@
 inode/directory=org.kde.dolphin.desktop;
+video/mp4=haruna.desktop;mpv.desktop;blender.desktop;vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
+image/jpeg=pinta.desktop;swappy.desktop;feh.desktop;librewolf.desktop;geeqie.desktop;
+image/png=pinta.desktop;krita_png.desktop;feh.desktop;librewolf.desktop;geeqie.desktop;
+

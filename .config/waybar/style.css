@@ -1,5 +1,31 @@
-@import "./mocha.css";
-
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+@define-color border rgba(183, 189, 248, 0.4);
+@define-color shadow rgb(30, 32, 48);
 * {
   border: none;
   border-radius: 0;
@@ -10,6 +36,7 @@
 
 window#waybar {
   background-color: transparent;
+  color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -19,25 +46,26 @@ window#waybar.hidden {
 }
 
 #workspaces {
+  font-size: 17px;
   background-color: transparent;
+  padding: 0 10px;
+  margin: 2px 4px 5px 4px;
+  /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
+  /* background-clip: padding-box; */
 }
 
 #workspaces button {
-  all: initial;
-  /* Remove GTK theme values (waybar #1351) */
-  min-width: 0;
-  /* Fix weird spacing in materia (waybar #450) */
-  box-shadow: inset 0 -3px transparent;
-  /* Use box-shadow instead of border so the text isn't offset */
-  padding: 3px 12px;
-  margin: 3px 3px;
   border-radius: 2px;
-  background-color: #1e1e2e;
+  margin: 3px;
+  padding: 2px 5px;
+  font-weight: bolder;
+  background-color: @mantle;
   color: @text;
+  min-width: 20px;
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
+  color: @base;
   background-color: @blue;
 }
 
@@ -53,22 +81,39 @@ window#waybar.hidden {
 }
 
 #memory,
-/* #custom-power, */
 #battery,
 #backlight,
 #pulseaudio,
 #network,
 #clock,
 #power-profiles-daemon,
-#custom-mediaplayer,
 #idle_inhibitor,
 #cpu,
+#custom-mediaplayer,
+#temperature,
+#language,
 #tray {
-  border-radius: 2px;
-  margin: 3px 3px;
-  padding: 3px 12px;
   background-color: @blue;
-  color: #181825;
+  padding: 0 10px;
+  margin: 2px 4px 5px 4px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7);
+  /* border: 2px solid @border; */
+  background-clip: padding-box;
+  color: @base;
+}
+
+#temperature {
+  background-color: @pink;
+}
+
+#temperature.critical {
+  background-color: @red;
+}
+
+#tray {
+  color: @base;
+  background-color: @crust;
 }
 
 #idle_inhibitor {
@@ -82,20 +127,12 @@ window#waybar.hidden {
 
 #custom-mediaplayer {
   background-color: @pink;
+  /* padding: 1px 7px; */
 }
 
 #custom-power {
   margin-right: 6px;
 }
-
-/* #custom-logo { */
-/*   padding-right: 7px; */
-/*   padding-left: 7px; */
-/*   margin-left: 5px; */
-/*   font-size: 15px; */
-/*   border-radius: 8px 0px 0px 8px; */
-/*   color: #1793d1; */
-/* } */
 
 #memory {
   background-color: @mauve;

@@ -18,6 +18,7 @@ return {
       "json",
       "javascript",
       "printf",
+      "dockerfile",
       -- add more arguments for adding more treesitter parsers
     },
   },

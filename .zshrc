@@ -71,6 +71,7 @@ setopt hist_find_no_dups
 
 alias ls='ls --color'
 alias l='ls -lah'
+alias lg='lazygit'
 alias zsrc='. ~/.zshrc'
 alias md='mkdir'
 alias clr='clear'

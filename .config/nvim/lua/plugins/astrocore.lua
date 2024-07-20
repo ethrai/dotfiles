@@ -36,6 +36,7 @@ return {
         shiftwidth = 2, -- sets vim.opt.shiftwidth
         tabstop = 2, -- sets vim.opt.tabstop
         showtabline = 2, -- sets vim.opt.showtabline to 2
+        colorcolumn = "80", -- sets vim.opt.colorcolumn to 80
       },
 
       g = { -- vim.g.<key>

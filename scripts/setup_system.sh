@@ -13,6 +13,7 @@ v yay -S --noconfirm --needed \
 	hyprland polkit-kde-agent qt5-wayland \
 	network-manager-applet \
 	hyprcursor hypridle hyprlang hyprlock hyprpaper hyprutils \
+	hyprshot \
 	power-profiles-daemon playerctl pamixer brightnessctl pavucontrol \
 	xdg-desktop-portal-hyprland waybar dunst \
 	wlsunset wl-clipboard cliphist\
@@ -30,7 +31,7 @@ v yay -S --noconfirm --needed \
 	catppuccin-gtk-theme-mocha kvantum-theme-catppuccin-git \
 	sddm-theme-catppuccin docker docker-compose git curl wget \
 	papirus-icon-theme glab github-cli httpie \
-	luarocks prettier tree-sitter\
+	luarocks prettier tree-sitter lazygit btop\
 
 
 v sudo chsh -s "$(which zsh)" "$USER"

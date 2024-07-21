@@ -70,8 +70,8 @@ window#waybar.hidden {
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
+  /* box-shadow: inherit; */
+  /* text-shadow: inherit; */
   color: @crust;
   background-color: @subtext1;
 }
@@ -96,10 +96,10 @@ window#waybar.hidden {
   background-color: @blue;
   padding: 0 10px;
   margin: 2px 4px 5px 4px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7);
+  border-radius: 2px;
+  /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
   /* border: 2px solid @border; */
-  background-clip: padding-box;
+  /* background-clip: padding-box; */
   color: @base;
 }
 

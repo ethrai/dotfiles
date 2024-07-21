@@ -30,7 +30,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: 'Noto Sans Condensed SemiBold';
+  font-family: 'Noto Sans SemiBold';
   font-size: 17px;
 }
 
@@ -48,15 +48,15 @@ window#waybar.hidden {
 #workspaces {
   font-size: 17px;
   background-color: transparent;
-  padding: 0 10px;
-  margin: 2px 4px 5px 4px;
+  padding: 0 5px;
+  margin: 2px 2px 2px 2px;
   /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
   /* background-clip: padding-box; */
 }
 
 #workspaces button {
   border-radius: 2px;
-  margin: 3px;
+  margin: 2px;
   padding: 2px 5px;
   font-weight: bolder;
   background-color: @mantle;
@@ -94,8 +94,8 @@ window#waybar.hidden {
 #language,
 #tray {
   background-color: @blue;
-  padding: 0 10px;
-  margin: 2px 4px 5px 4px;
+  padding: 1px 5px;
+  margin: 2px 2px 2px 2px;
   border-radius: 2px;
   /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
   /* border: 2px solid @border; */

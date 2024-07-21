@@ -10,7 +10,7 @@ v sudo pacman -S --noconfirm --needed go git base-devel && git clone https://aur
 printf "Installing desktop packages..."
 
 v yay -S --noconfirm --needed \
-	hyprland polkit-kde-agent qt5-wayland \
+	hyprland polkit-kde-agent qt5-wayland qt6-wayland\
 	network-manager-applet \
 	hyprcursor hypridle hyprlang hyprlock hyprpaper hyprutils \
 	hyprshot \
@@ -20,7 +20,7 @@ v yay -S --noconfirm --needed \
 	rofi-wayland rofi-emoji-git rofi-power-menu \
 	pipewire wireplumber plymouth blueman blueman bluez bluez-utils bluez-qt sddm sof-firmware intel-media-driver intel-ucode \
 	kitty tmux neovim vivaldi \
-	qt5ct kvantum kvantum-qt5 nwg-look \
+	qt5ct qt6ct kvantum kvantum-qt5 nwg-look \
 	zoxide ripgrep fzf treesitter fd bat zsh \
 	ttf-iosevka-term-ss08 ttf-iosevka-ss08 ttf-nerd-fonts-symbols \
 	ttf-nerd-fonts-symbols-common ttf-font-awesome \
@@ -32,6 +32,9 @@ v yay -S --noconfirm --needed \
 	sddm-theme-catppuccin docker docker-compose git curl wget \
 	papirus-icon-theme glab github-cli httpie \
 	luarocks prettier tree-sitter lazygit btop\
+
+echo "Installing node.js"
+v nvm install stable
 
 
 v sudo chsh -s "$(which zsh)" "$USER"

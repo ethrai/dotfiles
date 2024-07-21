@@ -1,9 +1,9 @@
 {
   "layer": "top",
-  "margin-bottom": 1,
-  "margin-top": 1,
-  "margin-left": 5,
-  "margin-right": 5,
+  // "margin-bottom": 1,
+  // "margin-top": 1,
+  // "margin-left": 5,
+  // "margin-right": 5,
   "height": 30,
   "position": "top",
   "modules-left": [
@@ -36,8 +36,8 @@
   // },
     "hyprland/language": {
     "format": "{}",
-    "format-en": "  US",
-    "format-ru": "  RU",
+    "format-en": " US",
+    "format-ru": " RU",
     "on-click": "hyprctl switchxkblayout evision-usb-device next",
   },
   "hyprland/workspaces": {
@@ -67,7 +67,7 @@
   },
   "memory": {
     "interval": 5,
-    "format": "{}% ",
+    "format": "{}%",
     "max-length": 10,
   },
   "tray": {
@@ -77,15 +77,14 @@
     "critical-threshold": 90,
     "on-click": "kitty --class center-float-large btop",
     "format-critical": "{icon} {temperatureC}°C",
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""],
+    "format": "{temperatureC}°C",
     "tooltip": true,
     "interval": 2,
   },
   "clock": {
     "tooltip-format": "{calendar}",
-    "format-alt": "  {:%a, %d %b %Y}",
-    "format": "  {:%I:%M %p}",
+    "format-alt": " {:%a, %d %b %Y}",
+    "format": " {:%I:%M %p}",
   },
   "network": {
     "format-wifi": "{icon}",
@@ -108,8 +107,8 @@
     "nospacing": 1,
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} ",
+    "format": "{volume}%{icon}",
+    "format-bluetooth": "{volume}%{icon}",
     "tooltip-format": "Volume : {volume}%",
     "format-muted": "󰖁",
     "format-icons": {
@@ -137,7 +136,7 @@
     },
   },
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "{capacity}%{icon}",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -199,7 +198,7 @@
     },
   },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%",
         "tooltip": false
     },
 }

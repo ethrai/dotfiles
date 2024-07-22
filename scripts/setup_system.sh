@@ -27,7 +27,7 @@ v yay -S --noconfirm --needed \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	terminus-font stow sudo opendoas \
 	reflector yt-dlp zip unzip nodejs \
-	telegram-desktop catppuccin-cursors-mocha \
+	telegram-desktop catppuccin-cursors-mocha qbittorrent \
 	catppuccin-gtk-theme-mocha kvantum-theme-catppuccin-git \
 	docker docker-compose git curl wget \
 	papirus-icon-theme glab github-cli httpie \

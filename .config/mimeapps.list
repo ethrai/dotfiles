@@ -1,5 +1,14 @@
-inode/directory=org.kde.dolphin.desktop;
-video/mp4=haruna.desktop;mpv.desktop;blender.desktop;vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
 image/jpeg=pinta.desktop;swappy.desktop;feh.desktop;librewolf.desktop;geeqie.desktop;
 image/png=pinta.desktop;krita_png.desktop;feh.desktop;librewolf.desktop;geeqie.desktop;
+inode/directory=org.kde.dolphin.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
 
+[Added Associations]
+application/pdf=org.kde.okular.desktop;
+video/x-matroska=mpv.desktop;vlc.desktop;
+
+[Default Applications]
+application/pdf=org.kde.okular.desktop;
+video/x-matroska=mpv.desktop;
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+text/plain=nvim.desktop;wine.desktop;vscodium-git.desktop;obsidian.desktop;vim.desktop;wine-extension-txt.desktop;vscodium.desktop;userapp-lvim-PRB3S1.desktop;userapp-lvim-UB2GT1.desktop;userapp-lvim %F-4GDCT1.desktop;

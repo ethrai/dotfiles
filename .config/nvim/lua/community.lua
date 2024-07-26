@@ -7,6 +7,6 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
-  -- { import = "astrocommunity.colorscheme.catppuccin" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.recipes.vscode" },
+  { import = "astrocommunity.recipes.disable-tabline" },
 }

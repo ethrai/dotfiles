@@ -30,8 +30,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  /* font-family: 'Noto Sans SemiBold'; */
-  font-family: 'Iosevka SS08 Semibold Extended';
+  font-family: 'Noto Sans SemiBold';
   font-size: 17px;
 }
 
@@ -51,15 +50,15 @@ window#waybar.hidden {
   font-size: 17px;
   background-color: transparent;
   padding: 0 5px;
-  margin: 2px 2px 2px 2px;
+  margin: 0px 2px;
   /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
   /* background-clip: padding-box; */
 }
 
 #workspaces button {
   border-radius: 2px;
-  margin: 2px;
-  padding: 2px 5px;
+  margin: 0px 2px;
+  padding: 0px 2px;
   background-color: @mantle;
   color: @text;
   min-width: 20px;
@@ -95,8 +94,8 @@ window#waybar.hidden {
 #language,
 #tray {
   background-color: @blue;
-  padding: 1px 5px;
-  margin: 2px 2px 2px 2px;
+  padding: 0px 4px;
+  margin: 0px 2px;
   border-radius: 2px;
   /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
   /* border: 2px solid @border; */
@@ -128,11 +127,9 @@ window#waybar.hidden {
 
 #custom-mediaplayer {
   background-color: @pink;
-  /* padding: 1px 7px; */
 }
 
 #custom-power {
-  margin-right: 6px;
 }
 
 #memory {
@@ -145,6 +142,7 @@ window#waybar.hidden {
 
 #power-profiles-daemon {
   background-color: @red;
+  padding-right: 7px;
 }
 
 #power-profiles-daemon.performance {
@@ -181,7 +179,6 @@ window#waybar.hidden {
 
 #network {
   background-color: @yellow;
-  /* padding-right: 17px; */
 }
 
 #clock {

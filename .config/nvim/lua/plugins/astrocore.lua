@@ -31,12 +31,28 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
         textwidth = 80, -- sets vim.opt.textwidth
-        expandtab = true, -- sets vim.opt.expandtab
-        smartindent = true, -- sets vim.opt.smartindent
-        shiftwidth = 2, -- sets vim.opt.shiftwidth
-        tabstop = 2, -- sets vim.opt.tabstop
-        showtabline = 2, -- sets vim.opt.showtabline to 2
+        showtabline = 0, -- sets vim.opt.showtabline to 2
         colorcolumn = "80", -- sets vim.opt.colorcolumn to 80
+        swapfile = false, -- disables swapfile
+        backup = false, -- disables backup
+        smoothscroll = true, -- enables smooth scrolling
+        scrolloff = 8, -- sets scrolloff to 8 lines
+        mouse = "", -- Disable mouse support
+        -- Splitting behavior
+        splitright = true, -- Split vertical window to the right
+        -- Indentation and tab settings
+        expandtab = true, -- Use spaces instead of tabs
+        cindent = true, -- Enable C-style indentation
+        smarttab = true, -- Insert appropriate number of spaces on tab
+        smartindent = true, -- Smart autoindenting on new lines
+        shiftwidth = 2, -- Number of spaces to use for each step of (auto)indent
+        tabstop = 2, -- Number of spaces that a <Tab> in the file counts for
+
+        termguicolors = true, -- Enable true color support
+        cursorline = false, -- Highlight the current line
+
+        -- Performance settings
+        updatetime = 50, -- Faster completion (default is 4000ms)
       },
 
       g = { -- vim.g.<key>
@@ -53,8 +69,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
-        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<S-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["<S-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
@@ -72,6 +88,12 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+
+        -- Next and prev diagnostic
+        ["ge"] = { function() vim.diagnostic.goto_next() end, desc = "Next diagnostic" },
+        ["gE"] = { function() vim.diagnostic.goto_prev() end, desc = "Prev diagnostic" },
+        ["]d"] = false,
+        ["[d"] = false,
       },
     },
   },

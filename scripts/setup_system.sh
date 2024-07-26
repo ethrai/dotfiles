@@ -7,6 +7,7 @@ function v() {
 }
 v sudo pacman -S --noconfirm --needed go git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
+
 printf "Installing desktop packages..."
 
 v yay -S --noconfirm --needed \
@@ -32,8 +33,11 @@ v yay -S --noconfirm --needed \
 	docker docker-compose git curl wget \
 	papirus-icon-theme glab github-cli httpie \
 	luarocks prettier tree-sitter lazygit btop kind kustomize kubectl \
-	tree \
+	tree nvm obsidian obs-studio mpv \
+	dolphin gwenview okular archlinux-xdg-menu\
 
+	v balooctl6 disable
+setfont ter-132b
 
 echo "Installing node.js"
 v nvm install stable

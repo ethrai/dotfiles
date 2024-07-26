@@ -12,7 +12,10 @@ vim.keymap.set("n", "P", '"0p', { silent = true })
 vim.filetype.add {
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 }
-
--- require("catppuccin").setup {
---   transparent_background = true,
--- }
+-- Came back to beam cursor on exit
+-- vim.cmd [[
+--     augroup RestoreCursorShapeOnExit
+--         autocmd!
+--         autocmd VimLeave * set guicursor=a:ver1
+--     augroup END
+-- ]]

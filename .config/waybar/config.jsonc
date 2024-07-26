@@ -1,10 +1,6 @@
 {
   "layer": "top",
-  // "margin-bottom": 1,
-  // "margin-top": 1,
-  // "margin-left": 5,
-  // "margin-right": 5,
-  "height": 30,
+  "height": 24,
   "position": "top",
   "modules-left": [
     "hyprland/workspaces",
@@ -20,7 +16,7 @@
     "memory",
     "temperature#cpu",
     "cpu",
-    "network",
+    // "network",
     "pulseaudio",
     "power-profiles-daemon",
     "battery"
@@ -67,16 +63,17 @@
   },
   "memory": {
     "interval": 5,
-    "format": "{}%",
+    "format": "MEM {}%",
     "max-length": 10,
   },
   "tray": {
     "spacing": 10,
+    "icon-size": 24,
   },
   "temperature#cpu": {
     "critical-threshold": 90,
     "on-click": "kitty --class center-float-large btop",
-    "format-critical": "{icon} {temperatureC}°C",
+    "format-critical": "{temperatureC}°C",
     "format": "{temperatureC}°C",
     "tooltip": true,
     "interval": 2,
@@ -84,7 +81,7 @@
   "clock": {
     "tooltip-format": "{calendar}",
     "format-alt": " {:%a, %d %b %Y}",
-    "format": " {:%I:%M %p}",
+    "format": "{:%I:%M %p}",
   },
   "network": {
     "format-wifi": "{icon}",
@@ -107,15 +104,15 @@
     "nospacing": 1,
   },
   "pulseaudio": {
-    "format": "{volume}%{icon}",
-    "format-bluetooth": "{volume}%{icon}",
+    // "format": "{volume}%{icon}",
+    // "format-bluetooth": "{volume}%{icon}",
+    // "tooltip-format": "Volume : {volume}%",
+    "format": "VOL {volume}%",
+    "format-bluetooth": "VOL {volume}% BT",
     "tooltip-format": "Volume : {volume}%",
-    "format-muted": "󰖁",
+    "format-muted": "VOL 0",
     "format-icons": {
-      "headphone": "",
-      "default": [
-        "󰖀",
-      ],
+      "headphone": "HP",
     },
     "on-click": "pavucontrol",
   },
@@ -198,7 +195,7 @@
     },
   },
     "cpu": {
-        "format": "{usage}%",
+        "format": "CPU {usage}%",
         "tooltip": false
     },
 }

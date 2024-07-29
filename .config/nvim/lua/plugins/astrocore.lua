@@ -25,13 +25,13 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
+        relativenumber = false, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
         textwidth = 80, -- sets vim.opt.textwidth
-        showtabline = 0, -- sets vim.opt.showtabline to 2
+        showtabline = 2, -- sets vim.opt.showtabline to 2
         colorcolumn = "80", -- sets vim.opt.colorcolumn to 80
         swapfile = false, -- disables swapfile
         backup = false, -- disables backup

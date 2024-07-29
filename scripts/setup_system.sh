@@ -7,11 +7,13 @@ function v() {
 }
 v sudo pacman -S --noconfirm --needed go git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
+rm -rf ~/dotfiles/scripts/yay
 
-printf "Installing desktop packages..."
+
+echo "Installing desktop packages..."
 
 v yay -S --noconfirm --needed \
-	hyprland polkit-kde-agent qt5-wayland qt6-wayland\
+	hyprland-git polkit-kde-agent qt5-wayland qt6-wayland\
 	network-manager-applet \
 	hyprcursor hypridle hyprlang hyprlock hyprpaper hyprutils \
 	hyprshot \
@@ -20,7 +22,7 @@ v yay -S --noconfirm --needed \
 	wlsunset wl-clipboard cliphist \
 	rofi-wayland rofi-emoji-git rofi-power-menu \
 	pipewire wireplumber plymouth blueman blueman bluez bluez-utils bluez-qt sof-firmware intel-media-driver intel-ucode \
-	kitty tmux neovim vivaldi \
+	kitty tmux neovim firefox \
 	qt5ct qt6ct kvantum kvantum-qt5 nwg-look \
 	zoxide ripgrep fzf fd bat zsh \
 	ttf-iosevka-term-ss08 ttf-iosevka-ss08 ttf-nerd-fonts-symbols \
@@ -29,17 +31,18 @@ v yay -S --noconfirm --needed \
 	terminus-font stow sudo opendoas \
 	reflector yt-dlp zip unzip nodejs \
 	telegram-desktop catppuccin-cursors-mocha qbittorrent \
-	catppuccin-gtk-theme-mocha kvantum-theme-catppuccin-git \
+	catppuccin-gtk-theme-mocha kvantum-theme-catppuccin-git papirus-folders-catppuccin-git\
 	docker docker-compose git curl wget \
 	papirus-icon-theme glab github-cli httpie \
 	luarocks prettier tree-sitter lazygit btop kind kustomize kubectl \
 	tree nvm obsidian obs-studio mpv \
 	dolphin gwenview okular archlinux-xdg-menu\
+	zed-preview \
 
-	v balooctl6 disable
-setfont ter-132b
+v balooctl6 disable
 
 echo "Installing node.js"
+source "${HOME}/.zshrc"
 v nvm install stable
 
 echo "Installing docker engine"
@@ -57,6 +60,3 @@ printf "Installing desktop packages (done).\n"
 
 echo "Installing tmux plugin manager"
 v git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-printf "Symlinking dotfiles..."
-v stow -v ~/dotfiles

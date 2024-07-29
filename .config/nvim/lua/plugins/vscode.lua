@@ -13,10 +13,11 @@ local plugins = {
   "nvim-ts-autotag",
   "nvim-treesitter-textobjects",
   "nvim-ts-context-commentstring",
-  "vscode-neovim/vscode-multi-cursor.nvim",
-  "kylechui/nvim-surround",
-  "tpope/vim-surround",
-  -- "folke/flash.nvim",
+  "mini.surround",
+  "mini.ai",
+  "vim-repeat",
+  "leap.nvim",
+  "vim-easy-align",
 }
 
 local Config = require "lazy.core.config"
@@ -38,16 +39,34 @@ return {
           ["<Leader>ff"] = "<CMD>Find<CR>",
           ["<Leader>fw"] = "<CMD>call VSCodeNotify('workbench.action.findInFiles')<CR>",
           ["<Leader>ls"] = "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>",
-          -- ["<Leader>gl"] = "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>",
         },
       },
     },
-  },
-  -- disable colorscheme setting
+  }, -- disable colorscheme setting
   { "AstroNvim/astroui", opts = { colorscheme = false } },
   -- disable treesitter highlighting
   {
     "nvim-treesitter/nvim-treesitter",
     opts = { highlight = { enable = false } },
+  },
+  {
+    "echasnovski/mini.surround",
+    version = "*",
+    config = function() require("mini.surround").setup() end,
+  },
+  { "echasnovski/mini.ai", version = "*", config = function() require("mini.ai").setup() end },
+  { "tpope/vim-repeat" },
+  { "ggandor/leap.nvim", config = function() require("leap").create_default_mappings() end },
+  {
+    "junegunn/vim-easy-align",
+    config = function()
+      vim.cmd [[
+          " Start interactive EasyAlign in visual mode (e.g. vipga)
+          xmap ga <Plug>(EasyAlign)
+
+          " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+          nmap ga <Plug>(EasyAlign)
+      ]]
+    end,
   },
 }

@@ -81,7 +81,8 @@ alias v='nvim'
 alias cd='z'
 alias grep='rg'
 alias cat='bat'
-alias kr='pkill -10 kitty'
+alias zz='zeditor'
+alias m='make'
 
 export XDG_CONFIG_HOME="${HOME}/.config"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"

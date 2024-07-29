@@ -39,9 +39,10 @@ return {
       custom_highlights = function(colors)
         return {
           TabLineSel = {
-            fg = colors.blue,
+            fg = colors.mauve,
             bg = colors.mantle,
           },
+          CmpBorder = { fg = colors.surface2 },
         }
       end,
       default_integrations = true,
@@ -53,6 +54,7 @@ return {
         indent_blankline = true,
         notify = true,
         dap = true,
+        treesitter_context = true,
         mason = true,
         hop = true,
         aerial = true,
@@ -67,8 +69,5 @@ return {
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
       },
     }
-
-    -- setup must be called before loading
-    vim.cmd.colorscheme "catppuccin"
   end,
 }

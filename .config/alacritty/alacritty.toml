@@ -34,8 +34,8 @@ family = "Iosevka Term SS08"
 style = "Regular"
 
 [font.offset]
-x = 1
-y = 1
+x = 0
+y = 0
 
 [[keyboard.bindings]]
 action = "Paste"

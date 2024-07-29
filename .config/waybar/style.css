@@ -35,8 +35,7 @@
 }
 
 window#waybar {
-  /* background-color: transparent; */
-  background-color: @base;
+  background-color: transparent;
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -46,17 +45,17 @@ window#waybar.hidden {
   opacity: 0.5;
 }
 
+.modules-right {
+  background-color: @mantle;
+}
+
 #workspaces {
-  font-size: 17px;
-  background-color: transparent;
-  padding: 0 5px;
-  margin: 0px 2px;
-  /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
-  /* background-clip: padding-box; */
+  font-size: 18px;
+  background-color: @mantle;
 }
 
 #workspaces button {
-  border-radius: 2px;
+  border-radius: 0px;
   margin: 0px 2px;
   padding: 0px 2px;
   background-color: @mantle;
@@ -66,7 +65,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: @base;
-  background-color: @blue;
+  background-color: @mauve;
 }
 
 #workspaces button:hover {
@@ -86,107 +85,105 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #clock,
-#power-profiles-daemon,
 #idle_inhibitor,
 #cpu,
 #custom-mediaplayer,
 #temperature,
 #language,
 #tray {
-  background-color: @blue;
   padding: 0px 4px;
   margin: 0px 2px;
-  border-radius: 2px;
+  border-radius: 0px;
   /* box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7); */
   /* border: 2px solid @border; */
   /* background-clip: padding-box; */
-  color: @base;
+  color: @text;
 }
 
 #temperature {
-  background-color: @pink;
+  /* background-color: @pink; */
 }
 
 #temperature.critical {
-  background-color: @red;
+  /* background-color: @red; */
 }
 
 #tray {
-  color: @base;
-  background-color: @crust;
+  padding: 0 2px;
+  border-right: 1px solid @border;
 }
 
 #idle_inhibitor {
-  background-color: @rosewater;
+  /* background-color: @rosewater; */
 }
 
 #cpu {
-  background-color: @sky;
+  /* background-color: @sky; */
 }
 
 
 #custom-mediaplayer {
-  background-color: @pink;
+  /* background-color: @pink; */
 }
 
 #custom-power {
 }
 
 #memory {
-  background-color: @mauve;
+  /* background-color: @mauve; */
 }
 
 #battery {
-  background-color: @green;
+  /* background-color: @green; */
 }
 
 #power-profiles-daemon {
-  background-color: @red;
-  padding-right: 7px;
+  /* background-color: @red; */
+  /* padding-right: 7px; */
 }
 
 #power-profiles-daemon.performance {
-  background-color: @red;
+  /* background-color: @red; */
 }
 
 #power-profiles-daemon.balanced {
-  background-color: @yellow;
+  /* background-color: @yellow; */
 }
 
 #power-profiles-daemon.power-saver {
-  background-color: @teal;
+  /* background-color: @teal; */
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-  background-color: @red;
-  color: @yellow;
+  /* background-color: @red; */
+  /* color: @yellow; */
 }
 
 #battery.charging {
-  background-color: @green;
-  color: #181825;
+  /* background-color: @green; */
+  /* color: #181825; */
 }
 
 #backlight {
-  background-color: @maroon;
+  /* background-color: @maroon; */
 }
 
 #pulseaudio {
-  background-color: @peach;
+  /* background-color: @peach; */
 }
 
 #network {
-  background-color: @yellow;
+  /* background-color: @yellow; */
 }
 
 #clock {
-  background-color: @lavender;
+  /* background-color: @lavender; */
 }
 
 #custom-power {
-  background-color: @teal;
+  /* background-color: @teal; */
 }
 
 #tooltip {

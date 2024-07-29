@@ -1,2 +1,3 @@
+#!/bin/bash
 pkill hyprpaper # kill hyprpaper
 hyprpaper </dev/null >/dev/null 2>&1 & # completely detached from terminal

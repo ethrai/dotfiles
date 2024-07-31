@@ -6,13 +6,13 @@ video/mp4=mpv.desktop;vlc.desktop;
 [Added Associations]
 application/pdf=org.kde.okular.desktop;
 application/zip=ark.desktop;
-video/mp4=mpv-3.desktop;mpv-2.desktop;
+video/mp4=mpv-4.desktop;mpv-3.desktop;mpv-2.desktop;
 video/x-matroska=mpv.desktop;vlc.desktop;
 
 [Default Applications]
 application/pdf=org.kde.okular.desktop;
 application/zip=ark.desktop;
 text/plain=dev.zed.Zed-Preview.desktop;wine.desktop;vscodium-git.desktop;obsidian.desktop;vim.desktop;wine-extension-txt.desktop;vscodium.desktop;userapp-lvim-PRB3S1.desktop;userapp-lvim-UB2GT1.desktop;userapp-lvim %F-4GDCT1.desktop;
-video/mp4=mpv-3.desktop;
+video/mp4=mpv-4.desktop;
 video/x-matroska=mpv.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop

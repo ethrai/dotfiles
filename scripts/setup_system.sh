@@ -37,7 +37,6 @@ v yay -S --noconfirm --needed \
 	luarocks prettier tree-sitter lazygit btop kind kustomize kubectl \
 	tree nvm obsidian obs-studio mpv \
 	dolphin gwenview okular archlinux-xdg-menu\
-	zed-preview \
 
 v balooctl6 disable
 

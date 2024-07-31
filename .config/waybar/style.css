@@ -46,19 +46,22 @@ window#waybar.hidden {
 }
 
 .modules-right {
-  background-color: @mantle;
+  /* background-color: @mantle; */
+  background-color: @transparent;
 }
 
 #workspaces {
   font-size: 18px;
-  background-color: @mantle;
+  /* background-color: @mantle; */
+  background-color: @transparent;
 }
 
 #workspaces button {
   border-radius: 0px;
   margin: 0px 2px;
   padding: 0px 2px;
-  background-color: @mantle;
+  /* background-color: @mantle; */
+  background-color: @transparent;
   color: @text;
   min-width: 20px;
 }

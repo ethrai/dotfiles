@@ -1,0 +1,12 @@
+[Unit]
+Description=xremap service
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/xremap /home/sergio/.config/xremap/config.yml
+StandardOutput=journal
+StandardError=journal
+Restart=always
+
+[Install]
+WantedBy=default.target

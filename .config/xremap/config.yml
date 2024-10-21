@@ -1,0 +1,20 @@
+modmap:
+  - name: NotFuckingOptional # Optional
+    remap: # Required
+      capslock:
+        held: leftctrl # Required, also accepts arrays
+        alone: esc # Required, also accepts arrays
+      # shift_r:
+      #   held: shift_r
+      #   alone:
+      #     launch: ["echo", "hello"]
+      # {
+      #   launch:
+      #     [
+      #       "hyprctl",
+      #       "switchxkblayout",
+      #       "at-translated-set-2-keyboard",
+      #       "1",
+      #     ],
+      # }
+# hyprctl switchxkblayout at-translated-set-2-keyboard 0

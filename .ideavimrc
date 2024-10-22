@@ -1,0 +1,171 @@
+" general
+source ~/.vimrc
+let mapleader=" "
+set showcmd
+set showmode
+set number
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set idearefactormode=keep
+set visualbell
+set noerrorbells
+set ideajoin
+set ideastatusicon=gray
+
+" PLUGINS
+set quickscope
+set textobj-indent
+set easymotion
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set exchange
+" Trying the new syntax
+Plug 'machakann/vim-highlightedyank'
+" JUMPS AND GOTO'S
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gD :action GotoTypeDeclaration<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap go :action Back<CR>
+nnoremap gi :action Forward<CR>
+noremap gb :action JumpToLastChange<CR>
+noremap gf :action JumpToNextChange<CR>
+
+nmap K <Action>(QuickJavaDoc)
+vmap K <Action>(QuickJavaDoc)
+nmap gh <Action>(ShowErrorDescription)
+noremap <leader>se :action SearchEverywhere<CR>
+nnoremap <leader>fa mm`m:action GotoSymbol<CR>
+nnoremap <leader>fs mm`m:action FileStructurePopup<CR>
+nnoremap <leader>fa mm`m:action GotoAction<CR>
+noremap <leader><leader> mm`m:action GotoFile<CR>
+noremap <leader>ff mm`m:action GotoFile<CR>
+noremap <leader>fc mm`m:action GotoClass<CR>
+noremap <leader>fp mm`m:action FindInPath<CR>
+noremap <leader>j mm`m:action GotoNextError<CR>
+noremap <leader>k mm`m:action GotoPreviousError<CR>
+" Hacks
+" U is redo
+nnoremap U <C-r>
+noremap <silent> <esc> :nohlsearch<CR>
+" Do not overwrite unnamed register with x and s
+nnoremap x \"_x
+nnoremap s \"_s
+" Y yank until end of line
+nnoremap Y y$
+" Create Blank Newlines and stay in Normal mode
+nnoremap <silent> zj o<Esc>k
+nnoremap <silent> zk O<Esc>j
+" Maintain visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
+" Reselect last patsed text
+nnoremap gp `[v`]
+" CamelCaseMotion
+map w [w
+map e ]w
+map b [b
+" use H as 0 and L as $
+map H 0
+map L $
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+" Easymotion
+map , <Plug>(easymotion-prefix)
+map ,f <Plug>(easymotion-bd-f)
+map ,t <Plug>(easymotion-bd-t)
+map ,w <Plug>(easymotion-bd-w)
+map ,W <Plug>(easymotion-bd-W)
+map ,e <Plug>(easymotion-bd-e)
+map ,E <Plug>(easymotion-bd-E)
+map ,l <Plug>(easymotion-bd-jk)
+map ,s <Plug>(easymotion-bd-f2)
+map ,S <Plug>(easymotion-bd-t2)
+" Splitted editors
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+nmap <leader>ws <Action>(SplitVertically)
+map <leader>wu <Action>(Unsplit)
+nmap <leader>wq <Action>(CloseContent)
+nmap <leader>wh <Action>(CloseAllToTheLeft)
+nmap <leader>wl <Action>(CloseAllToTheRight)
+nmap <leader>wx <Action>(CloseAllEditorsButActive)
+nmap <leader>wr <Action>(ReopenClosedTab)
+" -------------------------------------------- collapse
+" nmap zc <Action>(CollapseRegion)
+" nmap za <Action>(ExpandRegion)
+" nmap zd <Action>(CollapseAllRegions)
+" nmap zf <Action>(ExpandAllRegions)
+" ---------------------------------------------
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+""""""""""""""""""""""""""""""""""""""Run""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>rf :action ChooseRunConfiguration<CR>
+noremap <leader>ru :action Run<CR>
+noremap <leader>rn :action RunClass<CR>
+noremap <leader>rc :action Coverage<CR>
+noremap <leader>rv :action RunCoverage<CR>
+noremap <leader>sp   :action Stop<CR>
+nnoremap <leader>rg :action Gradle.ExecuteTask<CR>
+""" Toolwindows
+nnoremap <leader>tw :action ToolWindowsGroup<CR>
+" ------------------------------------------------ Version control
+nmap <leader>ca <Action>(Annotate)
+nmap <leader>cb <Action>(Git.Branches)
+nmap <leader>cl <Action>(Vcs.Show.Log)
+nmap <leader>cm <Action>(Git.Merge)
+nmap <leader>co <Action>(Github.Open.In.Browser)
+nmap <leader>cp <Action>(Git.Pull)
+nmap <leader>cr <Action>(Git.Rebase)
+nmap <leader>cs <Action>(Vcs.Show.Local.Changes)
+nmap <leader>cu <Action>(Git.Push)
+nmap <leader>cv <Action>(Compare.LastVersion)
+nmap <leader>cw <Action>(ActivateCommitToolWindow)
+nmap <leader>cc <Action>(Vcs.QuickListPopupAction)
+""""""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+vnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+noremap <leader>rn :action RenameElement<CR>
+""""""""""""""""""""""""""""""""""""""Utilities""""""""""""""""""""""""""""""""
+vnoremap S :action SurroundWith<CR>
+noremap <leader>cap   :action CopyAbsolutePath<CR>
+noremap <leader>oi :action OptimizeImports<CR>
+nnoremap <CR><CR> :action ShowIntentionActions<CR>
+vnoremap <CR><CR> :action ShowIntentionActions<CR>
+noremap <leader>ps :action ShowProjectStructureSettings<CR>
+nnoremap <leader>ge :action Generate<CR>
+
+" IDE handlers
+sethandler <c-a> a:ide
+sethandler <c-x> a:ide
+sethandler <c-f> a:ide
+sethandler <c-p> a:ide
+sethandler <c-n> a:ide
+sethandler <c-e> a:ide
+sethandler <c-l> a:ide n:vim
+sethandler <c-k> a:ide
+sethandler <c-h> a:ide n:vim
+sethandler <c-j> a:ide
+sethandler <c-b> a:ide
+sethandler <c-g> a:ide
+sethandler <a-p> a:ide
+sethandler <c-v> a:ide
+sethandler <c-c> a:ide
+sethandler <c-t> a:ide
+sethandler <c-d> a:ide
+"" Vim handlers
+sethandler <c-s> a:vim
+sethandler <c-w> a:vim
+sethandler <s-cr> n:vim
+sethandler <c-o> n:vim
+sethandler <c-i> n:vim
+sethandler <c-r> a:vim
+
+sethandler <m-n> a:vim

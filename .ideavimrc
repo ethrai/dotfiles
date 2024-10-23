@@ -1,5 +1,5 @@
 " general
-source ~/.vimrc
+" source ~/.vimrc
 let mapleader=" "
 set showcmd
 set showmode
@@ -35,9 +35,9 @@ nnoremap gd :action GotoDeclaration<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap go :action Back<CR>
-nnoremap gi :action Forward<CR>
 noremap gb :action JumpToLastChange<CR>
 noremap gf :action JumpToNextChange<CR>
+noremap <leader>fw :action ReformatCode<CR>
 
 nmap K <Action>(QuickJavaDoc)
 vmap K <Action>(QuickJavaDoc)
@@ -55,7 +55,7 @@ noremap <leader>k mm`m:action GotoPreviousError<CR>
 " Hacks
 " U is redo
 nnoremap U <C-r>
-noremap <silent> <esc> :nohlsearch<CR>
+noremap <silent> <leader>h :nohlsearch<CR>
 " Do not overwrite unnamed register with x and s
 nnoremap x \"_x
 nnoremap s \"_s

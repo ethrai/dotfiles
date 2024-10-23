@@ -2,9 +2,20 @@
 
 set $mod Mod4
 
+#  Making IntelliJ IDEA loading window float nicely in the center. 
+for_window [class="jetbrains-.*" title="win0"] floating enable border none
+for_window [class="jetbrains-.*" title="settings"] floating enable, move center
+for_window [class="*"] floating enable, move center
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono 10
+font pango:JetBrainsMono 9
+
+# Bind window to workspace 
+
+assign [class="firefox"]  1
+assign [class="kitty"]  2
+assign [class="code"]  3
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -14,9 +25,12 @@ exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/wezterm'
 exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/code'
 
+exec "setxkbmap -layout us,ru"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec redshift -l 52.452030:25.397791 -m randr -P -t 6500:3500 -v -g 0.8
+
 exec_always --no-startup-id xset r rate 200 35 &
 exec_always --no-startup-id clipmenud
-exec --no-startup-id wezterm
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -28,6 +42,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id xinput set-prop ELAN06C6:00\ 04F3:3193\ Touchpad  "libinput Tapping Enabled" 1
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -46,7 +61,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill

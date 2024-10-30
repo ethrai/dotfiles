@@ -89,6 +89,7 @@ alias v='nvim'
 alias l='ls -lah --color'
 alias c='clear'
 alias cd='z'
+alias md='mkdir -p'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"

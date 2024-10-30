@@ -19,13 +19,10 @@ set quickscope
 set textobj-indent
 set easymotion
 set surround
-set multiple-cursors
 set commentary
 set argtextobj
 set easymotion
 set textobj-entire
-set ReplaceWithRegister
-set exchange
 " Trying the new syntax
 Plug 'machakann/vim-highlightedyank'
 " JUMPS AND GOTO'S
@@ -46,13 +43,11 @@ noremap <leader>se :action SearchEverywhere<CR>
 nnoremap <leader>fa mm`m:action GotoSymbol<CR>
 nnoremap <leader>fs mm`m:action FileStructurePopup<CR>
 nnoremap <leader>fa mm`m:action GotoAction<CR>
-noremap <leader><leader> mm`m:action GotoFile<CR>
 noremap <leader>ff mm`m:action GotoFile<CR>
 noremap <leader>fc mm`m:action GotoClass<CR>
-noremap <leader>fp mm`m:action FindInPath<CR>
+noremap <leader>fg mm`m:action FindInPath<CR>
 noremap <leader>j mm`m:action GotoNextError<CR>
 noremap <leader>k mm`m:action GotoPreviousError<CR>
-" Hacks
 " U is redo
 nnoremap U <C-r>
 noremap <silent> <leader>h :nohlsearch<CR>
@@ -79,43 +74,19 @@ map L $
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 " Easymotion
-map , <Plug>(easymotion-prefix)
-map ,f <Plug>(easymotion-bd-f)
-map ,t <Plug>(easymotion-bd-t)
-map ,w <Plug>(easymotion-bd-w)
-map ,W <Plug>(easymotion-bd-W)
-map ,e <Plug>(easymotion-bd-e)
-map ,E <Plug>(easymotion-bd-E)
-map ,l <Plug>(easymotion-bd-jk)
-map ,s <Plug>(easymotion-bd-f2)
-map ,S <Plug>(easymotion-bd-t2)
+map s <Plug>(easymotion-bd-f)
 " Splitted editors
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-nmap <leader>ws <Action>(SplitVertically)
-map <leader>wu <Action>(Unsplit)
-nmap <leader>wq <Action>(CloseContent)
-nmap <leader>wh <Action>(CloseAllToTheLeft)
-nmap <leader>wl <Action>(CloseAllToTheRight)
-nmap <leader>wx <Action>(CloseAllEditorsButActive)
-nmap <leader>wr <Action>(ReopenClosedTab)
-" -------------------------------------------- collapse
-" nmap zc <Action>(CollapseRegion)
-" nmap za <Action>(ExpandRegion)
-" nmap zd <Action>(CollapseAllRegions)
-" nmap zf <Action>(ExpandAllRegions)
-" ---------------------------------------------
+nmap <leader>| <Action>(SplitVertically)
+map <leader>\ <Action>(Unsplit)
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
 """"""""""""""""""""""""""""""""""""""Run""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>rf :action ChooseRunConfiguration<CR>
+nnoremap <leader>rc :action ChooseRunConfiguration<CR>
 noremap <leader>ru :action Run<CR>
 noremap <leader>rn :action RunClass<CR>
-noremap <leader>rc :action Coverage<CR>
-noremap <leader>rv :action RunCoverage<CR>
 noremap <leader>sp   :action Stop<CR>
 nnoremap <leader>rg :action Gradle.ExecuteTask<CR>
-""" Toolwindows
-nnoremap <leader>tw :action ToolWindowsGroup<CR>
 " ------------------------------------------------ Version control
 nmap <leader>ca <Action>(Annotate)
 nmap <leader>cb <Action>(Git.Branches)
@@ -132,9 +103,9 @@ nmap <leader>cc <Action>(Vcs.QuickListPopupAction)
 """"""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 vnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
-noremap <leader>rn :action RenameElement<CR>
+noremap <leader>re :action RenameElement<CR>
 """"""""""""""""""""""""""""""""""""""Utilities""""""""""""""""""""""""""""""""
-vnoremap S :action SurroundWith<CR>
+vnoremap <leader>s :action SurroundWith<CR>
 noremap <leader>cap   :action CopyAbsolutePath<CR>
 noremap <leader>oi :action OptimizeImports<CR>
 nnoremap <CR><CR> :action ShowIntentionActions<CR>

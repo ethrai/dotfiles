@@ -1,9 +1,4 @@
-" general
-" source ~/.vimrc
 let mapleader=" "
-set showcmd
-set showmode
-set number
 set incsearch
 set hlsearch
 set ignorecase
@@ -14,61 +9,48 @@ set noerrorbells
 set ideajoin
 set ideastatusicon=gray
 
-" PLUGINS
-set quickscope
-set textobj-indent
-set easymotion
+source ~/.vimrc
+
 set surround
 set commentary
-set argtextobj
 set easymotion
-set textobj-entire
-" Trying the new syntax
-Plug 'machakann/vim-highlightedyank'
-" JUMPS AND GOTO'S
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gD :action GotoTypeDeclaration<CR>
+
 nnoremap gd :action GotoDeclaration<CR>
+nnoremap gD :action GotoTypeDeclaration<CR>
+nnoremap gI :action GotoImplementation<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap go :action Back<CR>
 noremap gb :action JumpToLastChange<CR>
 noremap gf :action JumpToNextChange<CR>
-noremap <leader>fw :action ReformatCode<CR>
+noremap <leader>cf :action ReformatCode<CR>
+
+nnoremap <leader>ss mm`m:action FileStructurePopup<CR>
+noremap <leader>se :action SearchEverywhere<CR>
+nnoremap <leader>sS mm`m:action GotoSymbol<CR>
+noremap <leader>sg mm`m:action FindInPath<CR>
+noremap <leader>sc mm`m:action GotoClass<CR>
+noremap <leader>ff mm`m:action GotoFile<CR>
 
 nmap K <Action>(QuickJavaDoc)
 vmap K <Action>(QuickJavaDoc)
 nmap gh <Action>(ShowErrorDescription)
-noremap <leader>se :action SearchEverywhere<CR>
-nnoremap <leader>fa mm`m:action GotoSymbol<CR>
-nnoremap <leader>fs mm`m:action FileStructurePopup<CR>
-nnoremap <leader>fa mm`m:action GotoAction<CR>
-noremap <leader>ff mm`m:action GotoFile<CR>
-noremap <leader>fc mm`m:action GotoClass<CR>
-noremap <leader>fg mm`m:action FindInPath<CR>
+
 noremap <leader>j mm`m:action GotoNextError<CR>
 noremap <leader>k mm`m:action GotoPreviousError<CR>
-" U is redo
 nnoremap U <C-r>
 noremap <silent> <leader>h :nohlsearch<CR>
-" Do not overwrite unnamed register with x and s
 nnoremap x \"_x
 nnoremap s \"_s
-" Y yank until end of line
 nnoremap Y y$
-" Create Blank Newlines and stay in Normal mode
 nnoremap <silent> zj o<Esc>k
 nnoremap <silent> zk O<Esc>j
-" Maintain visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
-" Reselect last patsed text
 nnoremap gp `[v`]
-" CamelCaseMotion
 map w [w
 map e ]w
 map b [b
-" use H as 0 and L as $
 map H 0
 map L $
 nmap [[ <Action>(MethodUp)
@@ -81,13 +63,13 @@ map <C-l> <C-w>l
 nmap <leader>| <Action>(SplitVertically)
 map <leader>\ <Action>(Unsplit)
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
-""""""""""""""""""""""""""""""""""""""Run""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>rc :action ChooseRunConfiguration<CR>
+
+nnoremyp <leader>rc :action ChooseRunConfiguration<CR>
 noremap <leader>ru :action Run<CR>
 noremap <leader>rn :action RunClass<CR>
 noremap <leader>sp   :action Stop<CR>
 nnoremap <leader>rg :action Gradle.ExecuteTask<CR>
-" ------------------------------------------------ Version control
+
 nmap <leader>ca <Action>(Annotate)
 nmap <leader>cb <Action>(Git.Branches)
 nmap <leader>cl <Action>(Vcs.Show.Log)
@@ -104,16 +86,14 @@ nmap <leader>cc <Action>(Vcs.QuickListPopupAction)
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 vnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 noremap <leader>re :action RenameElement<CR>
-""""""""""""""""""""""""""""""""""""""Utilities""""""""""""""""""""""""""""""""
-vnoremap <leader>s :action SurroundWith<CR>
-noremap <leader>cap   :action CopyAbsolutePath<CR>
+vnoremap <leader>su :action SurroundWith<CR>
 noremap <leader>oi :action OptimizeImports<CR>
-nnoremap <CR><CR> :action ShowIntentionActions<CR>
-vnoremap <CR><CR> :action ShowIntentionActions<CR>
 noremap <leader>ps :action ShowProjectStructureSettings<CR>
 nnoremap <leader>ge :action Generate<CR>
+""""""""""""""""""""""""""""""""""""""Utilities""""""""""""""""""""""""""""""""
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+vnoremap <leader>ca :action ShowIntentionActions<CR>
 
-" IDE handlers
 sethandler <c-a> a:ide
 sethandler <c-x> a:ide
 sethandler <c-f> a:ide
@@ -138,5 +118,4 @@ sethandler <s-cr> n:vim
 sethandler <c-o> n:vim
 sethandler <c-i> n:vim
 sethandler <c-r> a:vim
-
 sethandler <m-n> a:vim

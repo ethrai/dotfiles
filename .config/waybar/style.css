@@ -1,12 +1,38 @@
+@define-color rosewater #f4dbd6;
+@define-color flamingo #f0c6c6;
+@define-color pink #f5bde6;
+@define-color mauve #c6a0f6;
+@define-color red #ed8796;
+@define-color maroon #ee99a0;
+@define-color peach #f5a97f;
+@define-color yellow #eed49f;
+@define-color green #a6da95;
+@define-color teal #8bd5ca;
+@define-color sky #91d7e3;
+@define-color sapphire #7dc4e4;
+@define-color blue #8aadf4;
+@define-color lavender #b7bdf8;
+@define-color text #cad3f5;
+@define-color subtext1 #b8c0e0;
+@define-color subtext0 #a5adcb;
+@define-color overlay2 #939ab7;
+@define-color overlay1 #8087a2;
+@define-color overlay0 #6e738d;
+@define-color surface2 #5b6078;
+@define-color surface1 #494d64;
+@define-color surface0 #363a4f;
+@define-color base #24273a;
+@define-color mantle #1e2030;
+@define-color crust #181926;
+
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, 'DejaVu Sans', sans-serif;
+    font-family: FontAwesome, 'Inter', sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    color: #f0f0f0;
+    background-color: @crust;
+    color: @text;
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 6px;
@@ -16,8 +42,9 @@ window#waybar {
 window#waybar.empty {
     background-color: transparent;
 }
+
 window#waybar.solo {
-    background-color: #FFFFFF;
+    background-color: @text;
 }
 
 
@@ -32,36 +59,21 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
+    box-shadow: inset 0 -3px @text;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @text;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 #workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @red;
 }
 
 #clock,
@@ -81,14 +93,15 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 10px;
-    color: #f0f0f0;
+    padding: 0 8px;
+    color: @text;
+    background-color: @;
     border-radius: 6px;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 2px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -102,17 +115,13 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
 }
 
-#battery {
-    background-color: #ffffff;
-    color: #000000;
-}
+#battery { }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: @base;
+    background-color: @green;
 }
 
 @keyframes blink {
@@ -124,8 +133,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: @red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -133,48 +141,28 @@ button:hover {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
 label:focus {
-    background-color: #000000;
+    background-color: @crust;
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: @teal;
+    color: @base;
 }
 
 #memory {
-    background-color: #9b59b6;
-}
-
-#disk {
-    background-color: #964B00;
+    background-color: @pink;
+    color: @base;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: @yellow;
+    color: @base;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: @blue;
+    color: @base;
 }
 
 #network.disconnected {
@@ -182,8 +170,8 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: @rosewater;
+    color: @base;
 }
 
 #pulseaudio.muted {
@@ -215,7 +203,8 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: @peach;
+    color: @base;
 }
 
 #temperature.critical {

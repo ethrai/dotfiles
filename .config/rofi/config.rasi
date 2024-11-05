@@ -1,3 +1,12 @@
+configuration {
+    show-icons: true;
 
-//@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
-@theme "/usr/share/rofi/themes/android_notification.rasi"
+    display-ssh:    "󰣀 ssh:";
+    display-run:    "󱓞 run:";
+    display-drun:   "󰣖 drun:";
+    display-window: "󱂬 window:";
+    display-combi:  "󰕘 combi:";
+    display-filebrowser: "󰉋 filebrowser:";
+}
+
+@theme "~/.config/rofi/theme.rasi"

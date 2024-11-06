@@ -7,7 +7,7 @@ local mux = wezterm.mux
 local config = wezterm.config_builder()
 
 config.font = wezterm.font({
-	family = "JetBrains Mono",
+	family = "monospace",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
 

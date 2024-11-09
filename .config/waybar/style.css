@@ -26,7 +26,7 @@
 @define-color crust #181926;
 
 * {
-    font-family: FontAwesome, 'monospace';
+    font-family: FontAwesome, "monospace";
     font-weight: 400;
     font-size: 16px;
     border-radius: 0.5em;
@@ -36,9 +36,8 @@ window#waybar {
     background-color: @crust;
     color: @text;
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
 }
-
 
 window#waybar.empty {
     background-color: transparent;
@@ -48,7 +47,6 @@ window#waybar.solo {
     background-color: @text;
 }
 
-
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -57,10 +55,8 @@ button {
 }
 
 box {
-  border: none;
+    border: none;
 }
-
-
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
@@ -69,38 +65,32 @@ button:hover {
 }
 
 #workspaces {
-  color: @peach;
-  font-weight: bold;
-  background-color: @surface0;
-  border: 1px solid @surface1;
+    background-color: @surface0;
+    border: 1px solid @surface1;
 }
 
 #workspaces label {
-  font-size: 16px;
+    font-size: 20px;
 }
 
 #workspaces button {
-    padding: 0 0.5em;
+    padding: 0 0.45em;
     background-color: @surface0;
     color: @text;
 }
 
 #workspaces button.active {
-  color: @mauve;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    color: @mauve;
 }
 
 #workspaces button.urgent {
-  background-color: @red;
-  color: @text;
+    background-color: @red;
+    color: @text;
 }
 
 /* Add spacing for right side modules */
 #tray {
-  padding: 0 1em;
+    padding: 0 1em;
 }
 
 #clock,
@@ -143,12 +133,13 @@ button:hover {
     color: @base;
 }
 
-#battery { 
+#battery {
     background-color: @blue;
     color: @base;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: @base;
     background-color: @green;
 }
@@ -274,7 +265,7 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 #privacy {

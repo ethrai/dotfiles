@@ -5,11 +5,8 @@
   "height": 24, // Waybar height (to be removed for auto height)
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
+  "modules-left": ["hyprland/workspaces"],
   "modules-right": [
-    "network",
     "idle_inhibitor",
     "pulseaudio",
     "cpu",
@@ -19,7 +16,7 @@
     "battery",
     // "hyprland/language",
     "clock",
-    "tray"
+    "tray",
   ],
   "hyprland/language": {
     "format": "{}",
@@ -40,13 +37,13 @@
       "2": "󰈹",
       "3": "",
       "4": "",
-      "5": "",
-      "6": "󰈙",
+      "5": "",
+      "7": "",
       "8": "",
       "9": "",
-      "10": "",
+      "10": "",
       "urgent": "",
-      "default": ""
+      "default": "",
     },
   },
   "keyboard-state": {
@@ -55,22 +52,22 @@
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": ""
-    }
+      "unlocked": "",
+    },
   },
   "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
+    "format": "<span style=\"italic\">{}</span>",
   },
   "idle_inhibitor": {
     "format": "{icon} ",
     "format-icons": {
       "activated": "󰛐",
-      "deactivated": "󰛑"
-    }
+      "deactivated": "󰛑",
+    },
   },
   "tray": {
     "icon-size": 20,
-    "spacing": 10
+    "spacing": 10,
   },
   "clock": {
     "format": "{:%H:%M}  ",
@@ -87,33 +84,29 @@
         "days": "<span color='#f0c6c6'><b>{}</b></span>",
         "weeks": "<span color='#8bd5ca'><b>W{}</b></span>",
         "weekdays": "<span color='#f5a97f'><b>{}</b></span>",
-        "today": "<span color='#ee99a0'><b><u>{}</u></b></span>"
-      }
+        "today": "<span color='#ee99a0'><b><u>{}</u></b></span>",
+      },
     },
     "actions": {
       "on-click-right": "mode",
       "on-scroll-up": "tz_up",
       "on-scroll-down": "tz_down",
       "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
+      "on-scroll-down": "shift_down",
+    },
   },
   "cpu": {
     "format": " {usage}%",
-    "tooltip": true
+    "tooltip": true,
   },
   "memory": {
-    "format": "󰍛 {}%"
+    "format": "󰍛 {}%",
   },
   "temperature": {
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{icon} {temperatureC}°C",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", ""],
   },
   "network": {
     "interval": 1,
@@ -122,28 +115,18 @@
     "tooltip-format": " {ifname} via {gwaddr}",
     "format-linked": "󰈁 {ifname} (No IP)",
     "format-disconnected": " Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{percent}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "battery": {
     "states": {
       // "good": 95,
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
@@ -152,13 +135,7 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", ""],
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -174,12 +151,8 @@
       "headset": "󰋎",
       "phone": "󰏲",
       "portable": "󰏲",
-      "default": [
-        "󰕿",
-        "󰖀",
-        "󰕾"
-      ]
+      "default": ["󰕿", "󰖀", "󰕾"],
     },
-    "on-click": "pavucontrol"
-  }
+    "on-click": "pavucontrol",
+  },
 }

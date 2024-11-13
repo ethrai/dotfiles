@@ -2,5 +2,5 @@
 application/pdf=zathura.desktop;org.pwmt.zathura-pdf-poppler.desktop;
 
 [Default Applications]
-application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+application/pdf=org.pwmt.zathura.desktop
 x-scheme-handler/viber=viber.desktop

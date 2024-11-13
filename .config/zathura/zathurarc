@@ -1,2 +1,3 @@
 set selection-clipboard clipboard
+set font "Iosevka 14"
 include catppuccin-macchiato

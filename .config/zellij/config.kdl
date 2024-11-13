@@ -3,7 +3,7 @@ mouse_mode false
 pane_frames false
 simplified_ui true
 
-a theme "catppuccin-macchiato"
+theme "catppuccin-macchiato"
 
 
 keybinds {

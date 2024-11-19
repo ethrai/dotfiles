@@ -1,5 +1,5 @@
 format=<b>%a ⏵</b> %s\n%b
-font=monospace 14
+font=monospace 12
 sort=-time
 # output=eDP-1
 layer=overlay

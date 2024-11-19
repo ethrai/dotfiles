@@ -73,6 +73,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 export EDITOR=nvim
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -86,7 +87,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias vim='nvim'
 alias v='nvim'
-alias l='ls -lah --color'
+alias l='eza -lah --color --icons'
 alias c='clear'
 alias cd='z'
 alias md='mkdir -p'

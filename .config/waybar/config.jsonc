@@ -5,8 +5,15 @@
   "height": 22, // Waybar height (to be removed for auto height)
   "spacing": 2, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
+    "tray",
+    "hyprland/language",
     "idle_inhibitor",
     "pulseaudio",
     "cpu",
@@ -14,14 +21,11 @@
     "temperature",
     "backlight",
     "battery",
-    // "hyprland/language",
-    "clock",
-    "tray",
   ],
   "hyprland/language": {
     "format": "{}",
-    "format-en": "  US",
-    "format-ru": "  RU",
+    "format-en": " US",
+    "format-ru": " RU",
     "on-click": "hyprctl switchxkblayout evision-usb-device next",
   },
   // Modules configuration
@@ -70,8 +74,8 @@
     "spacing": 10,
   },
   "clock": {
-    "format": "{:%H:%M}  ",
-    "format-alt": "{:%A, %B %d, %Y (%R)} 󰃭 ",
+    "format": "{:%H:%M} ",
+    "format-alt": "󰃭{:%A, %B %d, %Y (%R)}",
     // "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "tooltip-format": "\n<span size='11pt' font='monospace'>{calendar}</span>",
     "calendar": {
@@ -106,7 +110,11 @@
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""],
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
   },
   "network": {
     "interval": 1,
@@ -119,8 +127,18 @@
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "battery": {
     "states": {
@@ -128,14 +146,20 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% 󰂄",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -151,7 +175,11 @@
       "headset": "󰋎",
       "phone": "󰏲",
       "portable": "󰏲",
-      "default": ["󰕿", "󰖀", "󰕾"],
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ],
     },
     "on-click": "pwvucontrol",
   },

@@ -1,25 +1,26 @@
-@define-color base            #191724;
-@define-color surface         #1f1d2e;
-@define-color overlay         #26233a;
+@define-color base #191724;
+@define-color surface #1f1d2e;
+@define-color overlay #26233a;
 
-@define-color muted           #6e6a86;
-@define-color subtle          #908caa;
-@define-color text            #e0def4;
+@define-color muted #6e6a86;
+@define-color subtle #908caa;
+@define-color text #e0def4;
 
-@define-color love            #eb6f92;
-@define-color gold            #f6c177;
-@define-color rose            #ebbcba;
-@define-color pine            #31748f;
-@define-color foam            #9ccfd8;
-@define-color iris            #c4a7e7;
+@define-color love #eb6f92;
+@define-color gold #f6c177;
+@define-color rose #ebbcba;
+@define-color pine #31748f;
+@define-color foam #9ccfd8;
+@define-color iris #c4a7e7;
 
-@define-color highlightLow    #21202e;
-@define-color highlightMed    #403d52;
-@define-color highlightHigh   #524f67;
+@define-color highlightLow #21202e;
+@define-color highlightMed #403d52;
+@define-color highlightHigh #524f67;
+
 * {
   font-family: FontAwesome, "monospace";
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   border-radius: 0.5em;
 }
 
@@ -55,13 +56,10 @@ button:hover {
   color: @iris;
 }
 
-#workspaces {
-  background-color: @overlay;
-  border: 1px solid @muted;
-}
+#workspaces {}
 
 #workspaces label {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #workspaces button {
@@ -77,11 +75,6 @@ button:hover {
 #workspaces button.urgent {
   background-color: @love;
   color: @text;
-}
-
-/* Add spacing for right side modules */
-#tray {
-  padding: 0 1em;
 }
 
 #clock,
@@ -101,7 +94,6 @@ button:hover {
 #power-profiles-daemon {
   padding: 0 8px;
   color: @text;
-  background-color: @pine;
 }
 
 #window,
@@ -110,13 +102,21 @@ button:hover {
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
   margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
   margin-right: 0;
+}
+
+
+.modules-right,
+.modules-left,
+.modules-center {
+  border: 1px solid @muted;
+  background-color: @overlay;
 }
 
 #clock {
@@ -124,16 +124,10 @@ button:hover {
   /*color: @base;*/
 }
 
-#battery {
-  /*background-color: @blue;*/
-  /*color: @base;*/
-}
+#battery {}
 
 #battery.charging,
-#battery.plugged {
-  /*color: @base;*/
-  /*background-color: @green;*/
-}
+#battery.plugged {}
 
 @keyframes blink {
   to {
@@ -156,65 +150,30 @@ label:focus {
   /*background-color: @base;*/
 }
 
-#cpu {
-  /*background-color: @teal;*/
-  /*color: @base;*/
-}
-
-#memory {
-  /*background-color: @pink;*/
-  /*color: @base;*/
-}
-
-#backlight {
-  /*background-color: @yellow;*/
-  /*color: @base;*/
-}
-
-#network {
-  /*background-color: @blue;*/
-  /*color: @base;*/
-}
-
-#network.disconnected {
-  /*background-color: #f53c3c;*/
-}
-
-#pulseaudio {
-  /*background-color: @rosewater;*/
-  /*color: @base;*/
-}
 
 #pulseaudio.muted {
-  /*background-color: #90b1b1;*/
-  /*color: #2a5c45;*/
+  color: @love;
 }
 
 
-#temperature {
-  /*background-color: @peach;*/
-  /*color: @base;*/
-}
+#temperature {}
 
 #temperature.critical {
-  /*background-color: @love;*/
+  background-color: @love;
 }
 
-#tray {
-  /*background-color: @mantle;*/
-}
+#tray {}
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
   background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
-  background-color: @surface;
   color: @muted;
 }
 
@@ -226,4 +185,3 @@ label:focus {
   /*background: @mauve;*/
   /*color: @base;*/
 }
-

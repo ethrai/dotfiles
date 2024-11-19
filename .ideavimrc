@@ -1,4 +1,5 @@
 let mapleader=" "
+set clipboard^=unnamedplus,unnamed
 set incsearch
 set hlsearch
 set ignorecase
@@ -42,7 +43,6 @@ nnoremap U <C-r>
 noremap <silent> <leader>h :nohlsearch<CR>
 nnoremap x \"_x
 nnoremap s \"_s
-nnoremap Y y$
 nnoremap <silent> zj o<Esc>k
 nnoremap <silent> zk O<Esc>j
 vnoremap < <gv
@@ -50,7 +50,6 @@ vnoremap > >gv
 nnoremap gp `[v`]
 map w [w
 map e ]w
-map b [b
 map H 0
 map L $
 nmap [[ <Action>(MethodUp)
@@ -64,7 +63,7 @@ nmap <leader>| <Action>(SplitVertically)
 map <leader>\ <Action>(Unsplit)
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
 
-nnoremyp <leader>rc :action ChooseRunConfiguration<CR>
+nnoremap <leader>rc :action ChooseRunConfiguration<CR>
 noremap <leader>ru :action Run<CR>
 noremap <leader>rn :action RunClass<CR>
 noremap <leader>sp   :action Stop<CR>
@@ -114,7 +113,6 @@ sethandler <c-d> a:ide
 "" Vim handlers
 sethandler <c-s> a:vim
 sethandler <c-w> a:vim
-sethandler <s-cr> n:vim
 sethandler <c-o> n:vim
 sethandler <c-i> n:vim
 sethandler <c-r> a:vim

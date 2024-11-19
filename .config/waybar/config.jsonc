@@ -2,8 +2,8 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 24, // Waybar height (to be removed for auto height)
-  "spacing": 4, // Gaps between modules (4px)
+  "height": 22, // Waybar height (to be removed for auto height)
+  "spacing": 2, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces"],
   "modules-right": [
@@ -153,6 +153,6 @@
       "portable": "󰏲",
       "default": ["󰕿", "󰖀", "󰕾"],
     },
-    "on-click": "pavucontrol",
+    "on-click": "pwvucontrol",
   },
 }

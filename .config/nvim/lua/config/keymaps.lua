@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 vim.keymap.del({ "i", "v", "n" }, "<M-k>")
 vim.keymap.del({ "i", "v", "n" }, "<M-j>")
+-- vim.keymap.del({ "i", "v", "n" }, "<leader>gg")

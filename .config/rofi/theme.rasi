@@ -1,114 +1,135 @@
-/**
- * Catppuccin Mocha theme
- * Color palette copied from https://catppuccin.com/palette
- * https://github.com/hiimsergey/rofi-catppuccin
- */
+@import "default"
 
 * {
-    base: #1e1e2e;
-    surface0: #313244;
-    overlay0: #6c7086;
-    text: #cdd6f4;
+	bg: #191724;
+	cur: #1f1d2e;
+	fgd: #e0def4;
+	cmt: #6e6a86;
+	cya: #9ccfd8;
+	grn: #31748f;
+	ora: #ebbcba;
+	pur: #c4a7e7;
+	red: #eb6f92;
+	yel: #f6c177;
 
-    mauve: #cba6f7;
-    red: #f38ba8;
-    peach: #fab387;
-    green: #a6e3a1;
-    lavender: #b4befe;
+	font: "monospace 12";
 
-    background-color: @base;
+	foreground: @fgd;
+	background: @bg;
+	active-background: @grn;
+	urgent-background: @red;
+
+	selected-background: @active-background;
+	selected-urgent-background: @urgent-background;
+	selected-active-background: @active-background;
+	separatorcolor: @active-background;
+	bordercolor: @ora;
 }
 
-window {
-    height: 600;
-    width: 600;
-
-    border: 3;
-    border-radius: 10;
-    border-color: @lavender;
+#window {
+	background-color: @background;
+	border:           3;
+	border-radius:    6;
+	border-color:     @bordercolor;
+	padding:          5;
 }
-
-mainbox {
-    spacing: 0;
-    children: [inputbar, message, listview];
+#mainbox {
+	border:  0;
+	padding: 5;
 }
-
-inputbar {
-    color: @text;
-    padding: 10;
-    background-color: @base;
+#message {
+	border:       1px solid 0px 0px ;
+	border-color: @separatorcolor;
+	padding:      1px ;
 }
-
-message {
-    padding: 8;
-    background-color: @overlay0;
+#textbox {
+	text-color: @foreground;
 }
-
-listview {
-    padding: 4;
-    border-radius: 0 0 10 10;
-    border: 2 2 2 2;
-    border-color: @base;
-    background-color: @base;
-    dynamic: false;
+#listview {
+	fixed-height: 0;
+	border:       2px solid 0px 0px ;
+	border-color: @bordercolor;
+	spacing:      2px ;
+	scrollbar:    false;
+	padding:      2px 0px 0px ;
 }
-
-textbox {
-    text-color: @text;
-    background-color: inherit;
+#element {
+	border:  0;
+	padding: 1px ;
 }
-
-error-message {
-    border: 20 20 20 20;
+#element.normal.normal {
+	background-color: @background;
+	text-color:       @foreground;
 }
-
-entry, prompt, case-indicator {
-    text-color: inherit;
+#element.normal.urgent {
+	background-color: @urgent-background;
+	text-color:       @urgent-foreground;
 }
-
-prompt {
-    margin: 0 10 0 0;
+#element.normal.active {
+	background-color: @active-background;
+	text-color:       @background;
 }
-
-element {
-    padding: 5;
-    vertical-align: 0.5;
-    border-radius: 10;
-    background-color: @surface0;
+#element.selected.normal {
+	background-color: @selected-background;
+	text-color:       @foreground;
 }
-
-element.selected.normal {
-    background-color: @overlay0;
+#element.selected.urgent {
+	background-color: @selected-urgent-background;
+	text-color:       @foreground;
 }
-
-element.alternate.normal {
-    background-color: inherit;
+#element.selected.active {
+	background-color: @selected-active-background;
+	text-color:       @background;
 }
-
-element.normal.active, element.alternate.active {
-    background-color: @peach;
+#element.alternate.normal {
+	background-color: @background;
+	text-color:       @foreground;
 }
-
-element.selected.active {
-    background-color: @green;
+#element.alternate.urgent {
+	background-color: @urgent-background;
+	text-color:       @foreground;
 }
-
-element.normal.urgent, element.alternate.urgent {
-    background-color: @red;
+#element.alternate.active {
+	background-color: @active-background;
+	text-color:       @foreground;
 }
-
-element.selected.urgent {
-    background-color: @mauve;
+#scrollbar {
+	width:        2px ;
+	border:       0;
+	handle-width: 8px ;
+	padding:      0;
 }
-
-element-text, element-icon {
-    size: 20;
-    margin: 0 10 0 0;
-    vertical-align: 0.5;
-    background-color: inherit;
-    text-color: @text;
+#sidebar {
+	border:       2px dash 0px 0px ;
+	border-color: @separatorcolor;
 }
-
-element-text .active, element-text .urgent {
-    text-color: @base;
+#button.selected {
+	background-color: @selected-background;
+	text-color:       @foreground;
+}
+#inputbar {
+	spacing:    0;
+	text-color: @foreground;
+	padding:    1px ;
+}
+#case-indicator {
+	spacing:    0;
+	text-color: @foreground;
+}
+#entry {
+	spacing:    0;
+	text-color: @cya;
+}
+#prompt {
+	spacing:    0;
+	text-color: @grn;
+}
+#inputbar {
+	children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+	expand:     false;
+	str:        ":";
+	margin:     0px 0.3em 0em 0em;
+	text-color: @grn;
 }

@@ -1,96 +1,87 @@
-@define-color rosewater #f4dbd6;
-@define-color flamingo #f0c6c6;
-@define-color pink #f5bde6;
-@define-color mauve #c6a0f6;
-@define-color red #ed8796;
-@define-color maroon #ee99a0;
-@define-color peach #f5a97f;
-@define-color yellow #eed49f;
-@define-color green #a6da95;
-@define-color teal #8bd5ca;
-@define-color sky #91d7e3;
-@define-color sapphire #7dc4e4;
-@define-color blue #8aadf4;
-@define-color lavender #b7bdf8;
-@define-color text #cad3f5;
-@define-color subtext1 #b8c0e0;
-@define-color subtext0 #a5adcb;
-@define-color overlay2 #939ab7;
-@define-color overlay1 #8087a2;
-@define-color overlay0 #6e738d;
-@define-color surface2 #5b6078;
-@define-color surface1 #494d64;
-@define-color surface0 #363a4f;
-@define-color base #24273a;
-@define-color mantle #1e2030;
-@define-color crust #181926;
+@define-color base            #191724;
+@define-color surface         #1f1d2e;
+@define-color overlay         #26233a;
 
+@define-color muted           #6e6a86;
+@define-color subtle          #908caa;
+@define-color text            #e0def4;
+
+@define-color love            #eb6f92;
+@define-color gold            #f6c177;
+@define-color rose            #ebbcba;
+@define-color pine            #31748f;
+@define-color foam            #9ccfd8;
+@define-color iris            #c4a7e7;
+
+@define-color highlightLow    #21202e;
+@define-color highlightMed    #403d52;
+@define-color highlightHigh   #524f67;
 * {
-    font-family: FontAwesome, "monospace";
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 0.5em;
+  font-family: FontAwesome, "monospace";
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 0.5em;
 }
 
 window#waybar {
-    background-color: @crust;
-    color: @text;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+  background-color: @base;
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 0em;
 }
 
 window#waybar.empty {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 window#waybar.solo {
-    background-color: @text;
+  background-color: @text;
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
 }
 
 box {
-    border: none;
+  border: none;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px @text;
+  color: @iris;
 }
 
 #workspaces {
-    background-color: @surface0;
-    border: 1px solid @surface1;
+  background-color: @overlay;
+  border: 1px solid @muted;
 }
 
 #workspaces label {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #workspaces button {
-    padding: 0 0.45em;
-    background-color: @surface0;
-    color: @text;
+  padding: 0 0.45em;
+  background-color: @overlay;
+  color: @text;
 }
 
 #workspaces button.active {
-    color: @mauve;
+  color: @rose;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
-    color: @text;
+  background-color: @love;
+  color: @text;
 }
 
 /* Add spacing for right side modules */
 #tray {
-    padding: 0 1em;
+  padding: 0 1em;
 }
 
 #clock,
@@ -108,183 +99,131 @@ button:hover {
 #scratchpad,
 #language,
 #power-profiles-daemon {
-    padding: 0 8px;
-    color: @text;
-    background-color: @base;
+  padding: 0 8px;
+  color: @text;
+  background-color: @pine;
 }
 
 #window,
 #workspaces {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 #clock {
-    background-color: @maroon;
-    color: @base;
+  /*background-color: @maroon;*/
+  /*color: @base;*/
 }
 
 #battery {
-    background-color: @blue;
-    color: @base;
+  /*background-color: @blue;*/
+  /*color: @base;*/
 }
 
 #battery.charging,
 #battery.plugged {
-    color: @base;
-    background-color: @green;
+  /*color: @base;*/
+  /*background-color: @green;*/
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: @red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: @love;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 label:focus {
-    background-color: @crust;
+  /*background-color: @base;*/
 }
 
 #cpu {
-    background-color: @teal;
-    color: @base;
+  /*background-color: @teal;*/
+  /*color: @base;*/
 }
 
 #memory {
-    background-color: @pink;
-    color: @base;
+  /*background-color: @pink;*/
+  /*color: @base;*/
 }
 
 #backlight {
-    background-color: @yellow;
-    color: @base;
+  /*background-color: @yellow;*/
+  /*color: @base;*/
 }
 
 #network {
-    background-color: @blue;
-    color: @base;
+  /*background-color: @blue;*/
+  /*color: @base;*/
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+  /*background-color: #f53c3c;*/
 }
 
 #pulseaudio {
-    background-color: @rosewater;
-    color: @base;
+  /*background-color: @rosewater;*/
+  /*color: @base;*/
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+  /*background-color: #90b1b1;*/
+  /*color: #2a5c45;*/
 }
 
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: @red;
-}
 
 #temperature {
-    background-color: @peach;
-    color: @base;
+  /*background-color: @peach;*/
+  /*color: @base;*/
 }
 
 #temperature.critical {
-    background-color: @red;
+  /*background-color: @love;*/
 }
 
 #tray {
-    background-color: @mantle;
+  /*background-color: @mantle;*/
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+  background-color: @surface;
+  color: @muted;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+  color: @text;
 }
 
 #language {
-    background: @mauve;
-    color: @base;
+  /*background: @mauve;*/
+  /*color: @base;*/
 }
 
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-    background-color: transparent;
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
-}

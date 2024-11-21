@@ -1,31 +1,39 @@
-@define-color base #191724;
-@define-color surface #1f1d2e;
-@define-color overlay #26233a;
-
-@define-color muted #6e6a86;
-@define-color subtle #908caa;
-@define-color text #e0def4;
-
-@define-color love #eb6f92;
-@define-color gold #f6c177;
-@define-color rose #ebbcba;
-@define-color pine #31748f;
-@define-color foam #9ccfd8;
-@define-color iris #c4a7e7;
-
-@define-color highlightLow #21202e;
-@define-color highlightMed #403d52;
-@define-color highlightHigh #524f67;
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
 
 * {
   font-family: FontAwesome, "monospace";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 0.5em;
 }
 
 window#waybar {
-  background-color: @base;
+  background-color: @mantle;
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -53,27 +61,27 @@ box {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-  color: @iris;
+  color: @blue;
 }
 
 #workspaces {}
 
 #workspaces label {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #workspaces button {
   padding: 0 0.45em;
-  background-color: @overlay;
+  background-color: @base;
   color: @text;
 }
 
 #workspaces button.active {
-  color: @rose;
+  color: @mauve;
 }
 
 #workspaces button.urgent {
-  background-color: @love;
+  background-color: @maroon;
   color: @text;
 }
 
@@ -92,6 +100,7 @@ button:hover {
 #scratchpad,
 #language,
 #power-profiles-daemon {
+  border: 1px solid @surface1;
   padding: 0 8px;
   color: @text;
 }
@@ -99,6 +108,7 @@ button:hover {
 #window,
 #workspaces {
   margin: 0 2px;
+  border: 1px solid @surface1;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -115,14 +125,11 @@ button:hover {
 .modules-right,
 .modules-left,
 .modules-center {
-  border: 1px solid @muted;
-  background-color: @overlay;
+  /*border: 1px solid @surface0;*/
+  background-color: @base;
 }
 
-#clock {
-  /*background-color: @maroon;*/
-  /*color: @base;*/
-}
+#clock {}
 
 #battery {}
 
@@ -138,7 +145,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: @love;
+  background-color: @maroon;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -152,14 +159,14 @@ label:focus {
 
 
 #pulseaudio.muted {
-  color: @love;
+  color: @maroon;
 }
 
 
 #temperature {}
 
 #temperature.critical {
-  background-color: @love;
+  background-color: @maroon;
 }
 
 #tray {}
@@ -174,7 +181,8 @@ label:focus {
 }
 
 #idle_inhibitor {
-  color: @muted;
+  padding: 0 0 0 6px;
+  color: @surface0;
 }
 
 #idle_inhibitor.activated {

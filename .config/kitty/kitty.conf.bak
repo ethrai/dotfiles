@@ -52,6 +52,6 @@ symbol_map U+2500-U+259f Symbols Nerd Font Mono
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night Storm
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME

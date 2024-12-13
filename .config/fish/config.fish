@@ -3,5 +3,3 @@ if status is-interactive
 end
 
 zoxide init fish | source
-oh-my-posh init fish --config ~/.config/fish/ohmyposh.json | source
-fzf --fish | source

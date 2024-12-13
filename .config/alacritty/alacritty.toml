@@ -1,4 +1,23 @@
-general.import = ["~/.config/alacritty/rose-pine.toml"]
+# Colors (Solarized Light)
+
+# Default colors
+# Colors (Doom One)
+
+# Default colors
+[colors.primary]
+background = '#282c34'
+foreground = '#bbc2cf'
+
+# Normal colors
+[colors.normal]
+black   = '#282c34'
+red     = '#ff6c6b'
+green   = '#98be65'
+yellow  = '#ecbe7b'
+blue    = '#51afef'
+magenta = '#c678dd'
+cyan    = '#46d9ff'
+white   = '#bbc2cf'
 
 [cursor]
 blink_interval = 500
@@ -17,18 +36,18 @@ x = 0
 y = 0
 
 [font]
-size = 12
+size = 16
 
 [font.bold]
-family = "monospace"
+family = "Iosevka Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "monospace"
+family = "Iosevka Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "monospace"
+family = "Iosevka Nerd Font"
 style = "Medium"
 
 [font.offset]
@@ -46,13 +65,13 @@ mouse = "Middle"
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal.shell]
-program = "/bin/fish"
+program = "fish"
 
 [window]
-decorations = "full"
+decorations = "none"
 dynamic_title = true
 option_as_alt = "Both"
-#startup_mode = "Maximized"
+startup_mode = "Maximized"
 
 [window.dimensions]
 columns = 160

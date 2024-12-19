@@ -1,0 +1,20 @@
+{
+  "theme": "Rosé Pine Moon",
+  "buffer_font_family": "Iosevka Nerd Font",
+  "buffer_font_size": 16,
+  "vim_mode": true,
+  "assistant": {
+    "version": "2",
+    "enabled": false
+  },
+  "auto_update": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "toggle_relative_line_numbers": true
+  },
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "tab_bar": { "show": false },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  }
+}

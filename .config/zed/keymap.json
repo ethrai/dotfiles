@@ -1,0 +1,41 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-t": "terminal_panel::ToggleFocus",
+      "alt-shift-t": "workspace::NewTerminal",
+      "alt-j": "workspace::ToggleBottomDock",
+      "ctrl-j": null
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-s": [
+        "vim::PushOperator",
+        {
+          "AddSurrounds": {}
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "tab": "editor::Tab"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      "x": "project_panel::Cut",
+      "v": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Delete",
+      "o": "project_panel::Open",
+      "e": "editor::RevealInFileManager"
+    }
+  }
+]

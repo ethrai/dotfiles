@@ -11,31 +11,29 @@ set ideajoin
 set ideastatusicon=gray
 
 source ~/.vimrc
+source ~/.lazyideavim
+
+" Plugins
+Plug 'terryma/vim-multiple-cursors'
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
 
 set surround
 set commentary
 set easymotion
-
-nnoremap gd :action GotoDeclaration<CR>
-nnoremap gD :action GotoTypeDeclaration<CR>
-nnoremap gI :action GotoImplementation<CR>
-nnoremap gt :action GotoTest<CR>
-nnoremap gs :action GotoSuperMethod<CR>
-nnoremap go :action Back<CR>
-noremap gb :action JumpToLastChange<CR>
-noremap gf :action JumpToNextChange<CR>
-noremap <leader>cf :action ReformatCode<CR>
-
-nnoremap <leader>ss mm`m:action FileStructurePopup<CR>
-noremap <leader>se :action SearchEverywhere<CR>
-nnoremap <leader>sS mm`m:action GotoSymbol<CR>
-noremap <leader>sg mm`m:action FindInPath<CR>
-noremap <leader>sc mm`m:action GotoClass<CR>
-noremap <leader>ff mm`m:action GotoFile<CR>
-
-nmap K <Action>(QuickJavaDoc)
-vmap K <Action>(QuickJavaDoc)
-nmap gh <Action>(ShowErrorDescription)
 
 noremap <leader>j mm`m:action GotoNextError<CR>
 noremap <leader>k mm`m:action GotoPreviousError<CR>
@@ -63,24 +61,9 @@ nmap <leader>| <Action>(SplitVertically)
 map <leader>\ <Action>(Unsplit)
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
 
-nnoremap <leader>rc :action ChooseRunConfiguration<CR>
-noremap <leader>ru :action Run<CR>
-noremap <leader>rn :action RunClass<CR>
-noremap <leader>sp   :action Stop<CR>
-nnoremap <leader>rg :action Gradle.ExecuteTask<CR>
+nnoremap <leader>cd :action ShowErrorDescription<CR>
+nnoremap <leader>ss mm`m:action FileStructurePopup<CR>
 
-nmap <leader>ca <Action>(Annotate)
-nmap <leader>cb <Action>(Git.Branches)
-nmap <leader>cl <Action>(Vcs.Show.Log)
-nmap <leader>cm <Action>(Git.Merge)
-nmap <leader>co <Action>(Github.Open.In.Browser)
-nmap <leader>cp <Action>(Git.Pull)
-nmap <leader>cr <Action>(Git.Rebase)
-nmap <leader>cs <Action>(Vcs.Show.Local.Changes)
-nmap <leader>cu <Action>(Git.Push)
-nmap <leader>cv <Action>(Compare.LastVersion)
-nmap <leader>cw <Action>(ActivateCommitToolWindow)
-nmap <leader>cc <Action>(Vcs.QuickListPopupAction)
 """"""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 vnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
@@ -97,7 +80,7 @@ sethandler <c-a> a:ide
 sethandler <c-x> a:ide
 sethandler <c-f> a:ide
 sethandler <c-p> a:ide
-sethandler <c-n> a:ide
+sethandler <c-n> a:ide n:vim v:vim
 sethandler <c-e> a:ide
 sethandler <c-l> a:ide n:vim
 sethandler <c-k> a:ide

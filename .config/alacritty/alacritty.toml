@@ -1,23 +1,69 @@
-# Colors (Solarized Light)
-
-# Default colors
-# Colors (Doom One)
-
-# Default colors
 [colors.primary]
-background = '#282c34'
-foreground = '#bbc2cf'
+background = "#282a36"
+foreground = "#f8f8f2"
+bright_foreground = "#ffffff"
 
-# Normal colors
+[colors.cursor]
+
+text = "#282a36"
+cursor = "#f8f8f2"
+
+[colors.vi_mode_cursor]
+
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.selection]
+
+text = "CellForeground"
+background = "#44475a"
+
 [colors.normal]
-black   = '#282c34'
-red     = '#ff6c6b'
-green   = '#98be65'
-yellow  = '#ecbe7b'
-blue    = '#51afef'
-magenta = '#c678dd'
-cyan    = '#46d9ff'
-white   = '#bbc2cf'
+
+black = "#21222c"
+red = "#ff5555"
+green = "#50fa7b"
+yellow = "#f1fa8c"
+blue = "#bd93f9"
+magenta = "#ff79c6"
+cyan = "#8be9fd"
+white = "#f8f8f2"
+
+[colors.bright]
+
+black = "#6272a4"
+red = "#ff6e6e"
+green = "#69ff94"
+yellow = "#ffffa5"
+blue = "#d6acff"
+magenta = "#ff92df"
+cyan = "#a4ffff"
+white = "#ffffff"
+
+[colors.search.matches]
+
+foreground = "#44475a"
+background = "#50fa7b"
+
+[colors.search.focused_match]
+
+foreground = "#44475a"
+background = "#ffb86c"
+
+[colors.footer_bar]
+
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[colors.hints.start]
+
+foreground = "#282a36"
+background = "#f1fa8c"
+
+[colors.hints.end]
+
+foreground = "#f1fa8c"
+background = "#282a36"
 
 [cursor]
 blink_interval = 500
@@ -36,7 +82,7 @@ x = 0
 y = 0
 
 [font]
-size = 16
+size = 14
 
 [font.bold]
 family = "Iosevka Nerd Font"
@@ -68,6 +114,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 program = "fish"
 
 [window]
+opacity = 0.85
 decorations = "none"
 dynamic_title = true
 option_as_alt = "Both"
@@ -78,5 +125,5 @@ columns = 160
 lines = 80
 
 [window.padding]
-x = 2
-y = 2
+x = 5
+y = 5

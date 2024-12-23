@@ -1,3 +1,7 @@
 [user]
 	email = ryzhkosergej@gmail.com
 	name = Sergei Ryzhko
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main

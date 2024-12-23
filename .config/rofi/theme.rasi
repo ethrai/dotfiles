@@ -8,8 +8,8 @@
     fg-col2: #f38ba8;
     grey: #6c7086;
 
-    width: 960px;
-    font: "monospace 12";
+    width: 720px;
+    font: "monospace 10";
 }
 
 element-text, element-icon , mode-switcher {
@@ -18,7 +18,7 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 720px;
+    height: 640px;
     border: 2px;
     border-radius: 6px;
     border-color: @border-col;
@@ -88,7 +88,7 @@ button {
     padding: 10px;
     background-color: @bg-col-light;
     text-color: @grey;
-    vertical-align: 0.5; 
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 

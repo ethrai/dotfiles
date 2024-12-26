@@ -1,8 +1,9 @@
 {
-  "theme": "One Light",
-  "buffer_font_family": "MesloLGL Nerd Font",
-  "buffer_font_size": 18,
+  "theme": "Rosé Pine",
+  "buffer_font_family": "Iosevka Nerd Font",
   "ui_font_size": 18,
+  "buffer_font_size": 22,
+  "buffer_line_height": "standard",
   "vim_mode": true,
   "assistant": {
     "version": "2",
@@ -17,5 +18,11 @@
   "tab_bar": { "show": false },
   "features": {
     "inline_completion_provider": "supermaven"
-  }
+  },
+  "node": {
+    "path": null,
+    "npm_path": null,
+    "ignore_system_version": null
+  },
+  "soft_wrap": "preferred_line_length"
 }

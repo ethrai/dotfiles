@@ -46,7 +46,6 @@ mouse = "Middle"
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [window]
-opacity = 0.9
 decorations = "none"
 dynamic_title = true
 option_as_alt = "Both"

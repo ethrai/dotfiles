@@ -3,7 +3,7 @@ bold_font        auto
 italic_font      auto
 bold_italic_font auto
 
-font_size 13
+font_size 12
 
 enable_audio_bell no
 
@@ -51,3 +51,9 @@ underline_hyperlinks always
 # symbol_map U+276c-U+2771 Symbols Nerd Font Mono
 # # Box Drawing
 # symbol_map U+2500-U+259f Symbols Nerd Font Mono
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Macchiato
+include current-theme.conf
+# END_KITTY_THEME

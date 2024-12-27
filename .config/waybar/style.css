@@ -28,7 +28,7 @@
 * {
   font-family: FontAwesome, "monospace";
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 0.5em;
 }
 
@@ -68,11 +68,11 @@ button:hover {
 }
 
 #workspaces label {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #workspaces button {
-  padding: 0 0.45em;
+  padding: 0 0.3em;
   background-color: @base;
   color: @text;
 }
@@ -102,7 +102,7 @@ button:hover {
 #language,
 #power-profiles-daemon {
   border: 1px solid @surface1;
-  padding: 0 8px;
+  padding: 2px 6px;
   color: @text;
 }
 
@@ -184,8 +184,8 @@ label:focus {
 }
 
 #idle_inhibitor {
-  padding: 0 0 0 6px;
-  color: @surface0;
+  padding: 0 4px 0 6px;
+  color: @overlay1;
 }
 
 #idle_inhibitor.activated {

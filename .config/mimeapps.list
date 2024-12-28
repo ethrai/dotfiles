@@ -1,0 +1,4 @@
+
+[Default Applications]
+x-scheme-handler/terminal=ghostty.desktop
+text/plain=nvim.desktop

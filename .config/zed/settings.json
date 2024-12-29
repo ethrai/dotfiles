@@ -1,6 +1,6 @@
 {
   "theme": "Gruvbox Dark Soft",
-  "buffer_font_family": "Iosevka SS04",
+  "buffer_font_family": "JetBrains Mono",
   "buffer_font_features": {
     "ss04": true
   },

@@ -3,8 +3,13 @@ return {
   lazy = true,
   name = "catppuccin",
   opts = {
-    flavour = "mocha",
-    transparent_background = true,
+
+    background = { -- :h background
+      light = "latte",
+      dark = "mocha",
+    },
+
+    transparent_background = false,
     integrations = {
       aerial = true,
       alpha = true,
@@ -58,7 +63,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin",
     },
   },
 }

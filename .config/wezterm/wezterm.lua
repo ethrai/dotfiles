@@ -12,7 +12,7 @@ config.window_padding = {
 }
 
 config.font = wezterm.font({
-	family = "Iosevka Nerd Font",
+	family = "JetBrains Mono",
 	italic = false,
 })
 config.font_size = 14

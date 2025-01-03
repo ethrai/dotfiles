@@ -46,10 +46,7 @@ gnome-shell
 gnome-shell-extensions
 gnome-shell-pomodoro
 gnome-system-monitor
-gnome-text-editor
-gnome-tour
 gnome-tweaks
-gnome-user-docs
 gnome-user-share
 gnome-weather
 go
@@ -71,8 +68,6 @@ gvfs-wsdd
 htop
 intel-media-driver
 intel-ucode
-intellij-idea-ultimate-edition
-intellij-idea-ultimate-edition-jre
 inter-font
 iwd
 keyd
@@ -84,7 +79,6 @@ libva-intel-driver
 linux-firmware
 linux-zen
 loupe
-malcontent
 nano
 nautilus
 neovim
@@ -95,7 +89,6 @@ noto-fonts-cjk
 noto-fonts-extra
 npm
 obsidian
-orca
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -116,7 +109,7 @@ tecla
 telegram-desktop
 timeshift
 tmux
-totem
+mpv
 ttf-jetbrains-mono
 ttf-ms-win11-auto
 ufw
@@ -133,7 +126,6 @@ xorg-server
 xorg-xinit
 yay
 yazi
-yelp
 zip
 zoxide
 zram-generator

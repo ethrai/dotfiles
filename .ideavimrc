@@ -1,3 +1,6 @@
+source ~/.vimrc
+source ~/.lazyideavim
+
 let mapleader=" "
 set clipboard^=unnamedplus,unnamed
 set incsearch
@@ -10,27 +13,11 @@ set noerrorbells
 set ideajoin
 set ideastatusicon=gray
 
-source ~/.lazyideavim
-
 " Plugins
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'michaeljsmith/vim-indent-object'
 set functiontextobj
-" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
-nmap <C-n> <Plug>NextWholeOccurrence
-xmap <C-n> <Plug>NextWholeOccurrence
-nmap g<C-n> <Plug>NextOccurrence
-xmap g<C-n> <Plug>NextOccurrence
-xmap <C-x> <Plug>SkipOccurrence
-xmap <C-p> <Plug>RemoveOccurrence
-
-" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
-" <A-n> is used to enter accented text e.g. ñ
-" Feel free to pick your own mappings that are not affected. I like to use <leader>
-xmap <leader><C-n> <Plug>AllWholeOccurrences
-xmap <leader>g<C-n> <Plug>AllOccurrences
-
 set surround
 set commentary
 set easymotion
@@ -46,8 +33,6 @@ nnoremap <silent> zk O<Esc>j
 vnoremap < <gv
 vnoremap > >gv
 nnoremap gp `[v`]
-map w [w
-map e ]w
 map H 0
 map L $
 nmap [[ <Action>(MethodUp)
@@ -80,7 +65,7 @@ sethandler <c-a> a:ide
 sethandler <c-x> a:ide
 sethandler <c-f> a:ide
 sethandler <c-p> a:ide
-sethandler <c-n> a:ide n:vim v:vim
+sethandler <c-n> a:ide
 sethandler <c-e> a:ide
 sethandler <c-l> a:ide n:vim
 sethandler <c-k> a:ide
@@ -93,7 +78,6 @@ sethandler <c-v> a:ide
 sethandler <c-c> a:ide
 sethandler <c-t> a:ide
 sethandler <c-d> a:ide
-"" Vim handlers
 sethandler <c-s> a:vim
 sethandler <c-w> a:vim
 sethandler <c-o> n:vim

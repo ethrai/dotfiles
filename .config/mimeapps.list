@@ -1,4 +1,13 @@
-
 [Default Applications]
 x-scheme-handler/terminal=ghostty.desktop
+text/x-go=nvim.desktop
 text/plain=nvim.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+
+[Added Associations]
+text/x-go=dev.zed.Zed.desktop;nvim.desktop;
+text/plain=nvim.desktop;

@@ -73,6 +73,7 @@ intel-media-driver
 intel-ucode
 inter-font
 iwd
+jetbrains-toolbox
 keyd
 lazygit
 libreoffice-fresh
@@ -96,7 +97,6 @@ obsidian
 openssh
 orca
 pipewire-alsa
-power-profiles-daemon
 proton-vpn-gtk-app
 python-pip
 qbittorrent
@@ -114,6 +114,7 @@ sushi
 telegram-desktop
 terminus-font
 timeshift
+tlp
 tmux
 totem
 ttf-jetbrains-mono

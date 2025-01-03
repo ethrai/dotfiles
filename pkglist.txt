@@ -16,7 +16,6 @@ evince
 extension-manager
 eza
 fd
-firefox
 fprintd
 fzf
 gdm
@@ -25,8 +24,6 @@ git
 github-cli
 gnome-backgrounds
 gnome-calculator
-gnome-calendar
-gnome-characters
 gnome-clocks
 gnome-color-manager
 gnome-connections
@@ -45,9 +42,7 @@ gnome-shell-pomodoro
 gnome-system-monitor
 gnome-tweaks
 gnome-user-share
-gnome-weather
 go
-google-chrome
 grilo-plugins
 gst-plugin-pipewire
 gtk-engine-murrine
@@ -55,11 +50,9 @@ gvfs
 gvfs-afc
 gvfs-dnssd
 gvfs-goa
-gvfs-google
 gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
-gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
 htop
@@ -125,5 +118,4 @@ yay
 yazi
 zip
 zoxide
-zram-generator
 zsh

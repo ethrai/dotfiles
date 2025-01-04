@@ -26,12 +26,10 @@ gnome-backgrounds
 gnome-calculator
 gnome-color-manager
 gnome-connections
-gnome-contacts
 gnome-control-center
 gnome-disk-utility
 gnome-keyring
 gnome-menus
-gnome-music
 gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
@@ -42,7 +40,6 @@ gnome-system-monitor
 gnome-text-editor
 gnome-tweaks
 gnome-user-share
-gnome-weather
 go
 grilo-plugins
 gtk-engine-murrine
@@ -58,6 +55,7 @@ gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
 htop
+hyprland
 intel-media-driver
 intel-ucode
 inter-font
@@ -89,8 +87,8 @@ python-pip
 qbittorrent
 reflector
 ripgrep
-rygel
 smartmontools
+snap-pac
 snapper
 snapshot
 sof-firmware
@@ -100,7 +98,6 @@ sudo
 sushi
 telegram-desktop
 terminus-font
-timeshift
 tmux
 ttf-jetbrains-mono
 ttf-ms-win11-auto

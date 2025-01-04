@@ -1,0 +1,14 @@
+./etc
+
+./dconf
+./packages.sh
+./pkglist.txt
+./gnome-extensions.txt
+
+\.git
+\.gitignore
+\.gitmodules
+
+^/README.*
+^/LICENSE.*
+^/COPYING

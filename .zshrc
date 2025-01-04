@@ -79,7 +79,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ll='eza -lah --icons'
+alias ls='eza'
+alias ll='ls -lah --icons'
 alias md='mkdir -p'
 alias v='nvim'
 alias c='clear'

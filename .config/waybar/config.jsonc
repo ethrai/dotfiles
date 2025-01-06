@@ -1,16 +1,12 @@
 // -*- mode: jsonc -*-
 {
   "layer": "top", // Waybar at top layer
-  "position": "bottom", // Waybar position (top|bottom|left|right)
+  "position": "top", // Waybar position (top|bottom|left|right)
   "height": 22, // Waybar height (to be removed for auto height)
   "spacing": 2, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "clock"
-  ],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
     "hyprland/language",
@@ -110,11 +106,7 @@
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{icon} {temperatureC}°C",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", ""],
   },
   "network": {
     "interval": 1,
@@ -128,17 +120,7 @@
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "battery": {
     "states": {
@@ -153,13 +135,7 @@
     "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", "", "", ""],
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -175,11 +151,7 @@
       "headset": "󰋎",
       "phone": "󰏲",
       "portable": "󰏲",
-      "default": [
-        "󰕿",
-        "󰖀",
-        "󰕾"
-      ],
+      "default": ["󰕿", "󰖀", "󰕾"],
     },
     "on-click": "pwvucontrol",
   },

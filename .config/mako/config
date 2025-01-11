@@ -1,25 +1,26 @@
 format=<b>%a ⏵</b> %s\n%b
-font=monospace 12
+font=monospace 14
 sort=-time
 # output=eDP-1
-layer=overlay
+layer=top
 anchor=top-right
 width=350
 height=120
 margin=5
+outer-margin=10,0,0,0
 padding=0,5,10
 border-size=2
-border-radius=6
+border-radius=0
 icons=0
 max-icon-size=64
 default-timeout=4000
 ignore-timeout=1
 
 # Colors
-background-color=#1e1e2e
-text-color=#cdd6f4
-border-color=#cba6f7
-progress-color=over #313244
+background-color=#282828
+text-color=#ebdbb2
+border-color=#d65d0e
+progress-color=over #928374
 
 [urgency=high]
-border-color=#fab387
+border-color=#fb4934

@@ -1,0 +1,106 @@
+modmap:
+  - name: Global
+    remap:
+      CapsLock:
+        held: leftctrl
+        alone: esc
+        alone_timeout_millis: 150
+
+keymap:
+  - name: IDEA (modified from Default)
+    application:
+      only: jetbrains-idea
+    remap:
+      # Emacs basic
+      # C-b: left  # for Vim
+      # C-f: right # for Vim
+      C-k: up
+      C-j: down
+      C-h: left
+      C-l: right
+
+  - name: Firefox
+    application:
+      only: firefox
+    remap:
+      M-k: C-Shift-tab
+      M-j: C-tab
+      Super-s: C-f
+
+  # - name: Nocturn
+  #   application:
+  #     only: Nocturn
+  #   remap:
+  #     Super-j: M-j
+  #     Super-k: M-k
+  #     Super-o: M-o
+  #     Super-p: M-p
+  #     Super-Enter: Shift-Enter
+  #
+  # - name: Slack
+  #   application:
+  #     only: Slack
+  #   remap:
+  #     Super-o: C-Shift-tab
+  #     Super-p: C-tab
+  #     Super-n: C-k
+  #     Super-k: M-up
+  #     Super-j: M-down
+  #     C-M-k: Shift-Alt-up
+  #     C-M-j: Shift-Alt-down
+  #
+  #     Super-1: C-1
+  #     Super-2: C-2
+  #     Super-3: C-3
+  #     Super-4: C-4
+  #     Super-5: C-5
+  #     Super-6: C-6
+  #     Super-7: C-7
+  #     Super-8: C-8
+  #     Super-9: C-9
+  #
+  # - name: Default -- some of these are overridden by the above definitions
+  #   application:
+  #     not: [Google-chrome, Slack, Gnome-terminal, jetbrains-idea]
+  #   remap:
+  #     # Emacs basic
+  #     C-b: left
+  #     C-f: right
+  #     C-p: up
+  #     C-n: down
+  #
+  #     # Emacs word
+  #     Super-b: C-left
+  #     Super-f: C-right
+  #
+  #     # Emacs lines
+  #     C-a: home # TODO: Alt-C-a
+  #     C-e: end # TODO: Alt-C-e
+  #     C-k: [Shift-end, backspace] # TODO: Alt-C-k
+  #
+  #     # Alt -> Ctrl
+  #     Super-a: C-a
+  #     Super-z: C-z
+  #     Super-x: C-x
+  #     Super-c: C-c
+  #     Super-v: C-v
+  #     Super-w: C-w
+  #     Super-t: C-t
+  #     Super-l: C-l
+  #
+  #     # Tab changes + Alt-Enter simulation
+  #     Super-o: C-Shift-tab
+  #     Super-p: C-tab
+  #     Super-Enter: M-Enter
+  #
+  #     # actually these are vim insert mode bindings, but compatible with shell
+  #     C-w: [C-Shift-left, delete]
+  #
+  #     C-d: delete
+  #     Super-d: C-delete
+  #
+  #     # Underscore without Shift
+  #     RO: Shift-RO
+  #
+  #     # SKK hack for Chrome
+  #     C-j: C-m

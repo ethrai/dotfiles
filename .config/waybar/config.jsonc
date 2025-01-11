@@ -2,157 +2,77 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 22, // Waybar height (to be removed for auto height)
-  "spacing": 2, // Gaps between modules (4px)
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
   "modules-right": [
-    "tray",
-    "hyprland/language",
     "idle_inhibitor",
     "pulseaudio",
+    "network",
     "cpu",
     "memory",
-    "temperature",
     "backlight",
+    "sway/language",
     "battery",
+    "clock",
+    "tray",
   ],
-  "hyprland/language": {
-    "format": "{}",
-    "format-en": " US",
-    "format-ru": " RU",
-    "on-click": "hyprctl switchxkblayout evision-usb-device next",
-  },
-  // Modules configuration
-  "hyprland/workspaces": {
-    "all-outputs": false,
-    "active-only": "false",
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": "󰈹",
-      "3": "",
-      "4": "",
-      "5": "",
-      "7": "",
-      "8": "",
-      "9": "",
-      "10": "",
-      "urgent": "",
-      "default": "",
-    },
-  },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": "",
-    },
-  },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>",
   },
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}",
+  },
   "idle_inhibitor": {
-    "format": "{icon} ",
+    "format": "{icon}",
     "format-icons": {
-      "activated": "󰛐",
-      "deactivated": "󰛑",
+      "activated": "ACTIVE",
+      "deactivated": "INACTIVE",
     },
   },
   "tray": {
-    "icon-size": 20,
+    "icon-size": 18,
     "spacing": 10,
   },
   "clock": {
-    "format": "{:%H:%M}",
-    "format-alt": "󰃭{:%A, %B %d, %Y (%R)}",
-    // "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "tooltip-format": "\n<span size='11pt' font='monospace'>{calendar}</span>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#f4dbd6'><b>{}</b></span>",
-        "days": "<span color='#f0c6c6'><b>{}</b></span>",
-        "weeks": "<span color='#8bd5ca'><b>W{}</b></span>",
-        "weekdays": "<span color='#f5a97f'><b>{}</b></span>",
-        "today": "<span color='#ee99a0'><b><u>{}</u></b></span>",
-      },
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-scroll-up": "tz_up",
-      "on-scroll-down": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down",
-    },
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
   },
   "cpu": {
-    "format": " {usage}%",
-    "tooltip": true,
+    "format": "CPU {usage}%",
+    "tooltip": false,
   },
   "memory": {
-    "format": "󰍛 {}%",
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format-critical": "{temperatureC}°C {icon}",
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""],
-  },
-  "network": {
-    "interval": 1,
-    "format-wifi": "  󰜮 {bandwidthDownBytes} 󰜷 {bandwidthUpBytes}",
-    "format-ethernet": "󰈀  󰜮 {bandwidthDownBytes} 󰜷 {bandwidthUpBytes}",
-    "tooltip-format": " {ifname} via {gwaddr}",
-    "format-linked": "󰈁 {ifname} (No IP)",
-    "format-disconnected": " Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "format": "MEMORY {}%",
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format": "BACKLIGHT {percent}%",
   },
   "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15,
-    },
-    "format": "{icon} {capacity}%",
-    "format-full": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""],
+    "format": "BAT0 {capacity}%",
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon}  {format_source}",
-    "format-bluetooth-muted": "{icon} {format_source}",
+    "format": "{volume}% {format_source}",
+    "format-bluetooth": "BL {volume}% {format_source}",
+    "format-bluetooth-muted": "BL MUTED {format_source}",
     "format-muted": "{format_source}",
-    "format-source": "{volume}% 󰍬",
-    "format-source-muted": "󰍭",
-    "format-icons": {
-      "headphone": "󰋋",
-      "hands-free": "󰋎",
-      "headset": "󰋎",
-      "phone": "󰏲",
-      "portable": "󰏲",
-      "default": ["󰕿", "󰖀", "󰕾"],
-    },
-    "on-click": "pwvucontrol",
+    "format-source": "MIC {volume}%",
+    "format-source-muted": "MUTED",
+    "on-click": "pavucontrol",
   },
 }

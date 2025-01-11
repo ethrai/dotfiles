@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# !!!WRITTEN BY AI!!!
+# !!!WRITTEN BY LLM!!!
 
 # Exit immediately if a command exits with a non-zero status,
 # treat unset variables as errors, and catch errors in pipelines

@@ -1,12 +1,9 @@
 {
   "theme": "Gruvbox Dark Soft",
-  "buffer_font_family": "JetBrains Mono",
-  "buffer_font_features": {
-    "ss04": true
-  },
-  "buffer_font_size": 22,
+  "ui_font_size": 16,
+  "buffer_font_size": 18,
+  "buffer_font_family": "DejaVuSansM Nerd Font",
   "cursor_blink": false,
-  "ui_font_size": 18,
   "vim_mode": true,
   "assistant": {
     "version": "2",

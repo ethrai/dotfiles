@@ -24,17 +24,17 @@
 @define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
+@define-color crustaa rgba(17, 17, 27, 0.7);
 
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, sans-serif;
-  border-radius: 7px;
-  font-size: 13px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 window#waybar {
-  background-color: rgba(17, 17, 27, 0.5);
-  border: 1px solid rgba(88, 91, 112, 0.8);
+  background-color: rgba(17, 17, 27, 0.7);
+  border: 1px solid rgba(88, 91, 112, 0.9);
   color: @text;
   transition-property: background-color;
   transition-duration: .5s;
@@ -43,13 +43,6 @@ window#waybar {
 
 window#waybar.hidden {
   opacity: 0.2;
-}
-
-
-window#waybar.empty {
-  background-color: rgba(17, 17, 27, 0.5);
-  border: 1px solid rgba(88, 91, 112, 0.8);
-  border-radius: 5px;
 }
 
 
@@ -73,7 +66,15 @@ button:hover {
 }
 
 #window {
-  font-family: FontAwesome, monospace;
+  background-color: rgba(24, 24, 37, 0.7);
+  padding: 0 2px;
+  border: 1px solid rgba(88, 91, 112, 0.9);
+}
+
+
+window#waybar.empty #window {
+  background-color: transparent;
+  border: none;
 }
 
 #network:hover {
@@ -81,9 +82,8 @@ button:hover {
 }
 
 #workspaces {
-  background-color: @surface0;
+  background-color: rgba(24, 24, 37, 0.7);
   border: 1px solid rgba(88, 91, 112, 0.8);
-  margin: 1px;
 }
 
 #workspaces button {
@@ -124,26 +124,19 @@ button:hover {
 #language,
 #idle_inhibitor,
 #scratchpad {
-  background-color: @surface0;
   border: none;
   padding: 1px 5px;
   color: @text;
 }
 
 .modules-right {
-  background-color: @surface0;
-  border: 1px solid rgba(88, 91, 112, 0.8);
+  background-color: rgba(24, 24, 37, 0.7);
+  border: 1px solid rgba(88, 91, 112, 0.9);
   margin: 2px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-  margin-left: 2px;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-  margin-right: 2px;
+.modules-left {
+  margin: 2px 4px;
 }
 
 #clock {}
@@ -191,11 +184,6 @@ label:focus {
   background-color: @red;
 }
 
-#pulseaudio {}
-
-#pulseaudio.muted {
-  color: @red;
-}
 
 #wireplumber {}
 

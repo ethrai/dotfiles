@@ -1,27 +1,28 @@
 format=<b>%a ⏵</b> %s\n%b
-font=monospace 12
+font=sans-serif 12
 sort=-time
 # output=eDP-1
 layer=top
-anchor=top-right
+anchor=top-center
 width=350
 height=120
 margin=5
-outer-margin=10,0,0,0
-padding=0,5,10
+outer-margin=15,0,0,0
+padding=0,0,4
 border-size=2
-border-radius=4
-icons=0
+border-radius=5
+icons=1
+icon-path=/usr/share/icons/Papirus-Dark/
 max-icon-size=64
 default-timeout=4000
 ignore-timeout=1
 
 # Colors
 
-background-color=#1e1e2e
+background-color=#1e1e2eaa
 text-color=#cdd6f4
-border-color=#cba6f7
-progress-color=over #313244
+border-color=#cba6f7aa
+progress-color=over #313244aa
 
 [urgency=high]
-border-color=#fab387
+border-color=#fab387aa

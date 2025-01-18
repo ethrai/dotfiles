@@ -17,7 +17,6 @@ zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
-
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -42,6 +41,7 @@ HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
+setopt no_beep
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -57,6 +57,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi"
 
+zstyle ':fzf-tab:*' fzf-flags $(echo $FZF_DEFAULT_OPTS)
+
+export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/cargo/bin:$PATH"
+
 # Variables
 export EDITOR="nvim"
 
@@ -66,6 +70,9 @@ alias cd="z"
 alias ls="eza"
 alias l="eza -lah --icons"
 alias lg="lazygit"
+alias mu="mullvad"
+alias m="make"
+alias d="docker"
 
 # Shell intergrations
 eval "$(zoxide init zsh)"

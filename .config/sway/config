@@ -1,66 +1,70 @@
 set $mod Mod4
-# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term foot
-# Your preferred application launcher
-set $menu wmenu-run
 
 xwayland disable
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output eDP-1 scale 1.25
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+font monospace 10
+# default_border none
+# default_floating_border normal
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+### Aplication startup
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Orchis-Light-Compact'
+exec gsettings set org.gnome.desktop.interface document-font-name 'Inter 11'
+exec gsettings set org.gnome.desktop.interface font-name 'Inter 11'
+exec gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrains Mono 11'
+
+exec foot --server
+
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+exec mako
+exec wlsunset -l 48.864716 -L 23.685893
+exec waybar
+
+### Output
+output eDP-1 scale 1.25
 
 ### Input configuration
-#
-# Example configuration:
-#
 input "1267:12691:ELAN06C6:00_04F3:3193_Touchpad" {
 	dwt enabled
 	tap enabled
 	natural_scroll enabled
 	middle_emulation enabled
 }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+
+
+input "4012:2782:keyd_virtual_keyboard" {
+    repeat_rate 40
+    repeat_delay 250
+    xkb_layout us,ru
+    xkb_options grp:win_space_toggle
+}
+
+workspace_layout tabbed
+
 
 ### Key bindings
-#
 # Basics:
-#
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec footclient
+
+    bindsym $mod+d exec fuzzel
+    bindsym $mod+Shift+v exec cliphist list | fuzzel -d | cliphist decode | wl-copy
 
     # Kill focused window
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -137,7 +141,7 @@ input "1267:12691:ELAN06C6:00_04F3:3193_Touchpad" {
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+e layout default
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -198,24 +202,5 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-
-include /etc/sway/config.d/*

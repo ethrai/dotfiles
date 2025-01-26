@@ -1,0 +1,71 @@
+// -*- mode: jsonc -*-
+{
+  // "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
+  "modules-right": [
+    "tray",
+    "idle_inhibitor",
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "backlight",
+    "sway/language",
+    "battery",
+    "clock",
+  ],
+  // Modules configuration
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    },
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+  "clock": {
+    // "timezone": "Europe/Minsk",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
+  },
+  "cpu": {
+    "format": "CPU {usage}%",
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "MEM {}%",
+  },
+  "backlight": {
+    "format": "BRIGHT {percent}%",
+  },
+  "battery": {
+    "format": "BAT {capacity}%",
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "OUT {volume}% {format_source}",
+    "format-bluetooth": "OUT(BL) {volume}% {format_source}",
+    "format-bluetooth-muted": "OUT(BL):MUTED {format_source}",
+    "format-muted": "IN:MUTED {format_source}",
+    "format-source": "IN {volume}%",
+    "format-source-muted": "IN:MUTED",
+    "on-click": "pwvucontrol",
+  },
+}

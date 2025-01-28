@@ -48,6 +48,9 @@
   },
   "battery": {
     "format": "BAT {capacity}%",
+    "format-full": "BAT(F) {capacity}%",
+    "format-charging": "BAT(C) {capacity}%",
+    "format-plugged": "BAT(P) {capacity}%",
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface

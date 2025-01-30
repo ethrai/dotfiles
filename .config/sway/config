@@ -7,8 +7,9 @@ set $right l
 xwayland disable
 
 font monospace 10
-# default_border none
-# default_floating_border normal
+# hide_edge_corners smart
+smart_borders on
+
 
 ### Aplication startup
 exec swayidle -w \
@@ -17,8 +18,8 @@ exec swayidle -w \
          before-sleep 'swaylock -f -c 000000'
 
 
-exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 exec gsettings set org.gnome.desktop.interface document-font-name 'Inter 11'
 exec gsettings set org.gnome.desktop.interface font-name 'Inter 11'
 exec gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrains Mono 11'

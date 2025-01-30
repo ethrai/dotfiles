@@ -1,34 +1,15 @@
 return {
-  {
-    "echasnovski/mini.basics",
-    version = false,
-    lazy = false,
-    priority = 900,
-    enabled = false,
-
-    opts = {
-      basic = true,
-      extra_ui = false,
-      win_borders = "solid",
-      mappings = {
-        windows = true,
-      },
-      autocommands = {
-        basic = true,
-        relnum_in_visual_mode = false,
-      },
-    },
-  },
-  { "echasnovski/mini.ai",         version = false, opts = {} },
-  { "echasnovski/mini.pairs",      version = false, opts = {} },
-  { "echasnovski/mini.surround",   version = false, opts = {} },
-  { "echasnovski/mini.icons",      version = false, opts = {} },
-  { "echasnovski/mini.comment",    version = false, lazy = true, event = "VeryLazy", opts = {} },
-  { "echasnovski/mini.move",       version = false, opts = {} },
-  { "echasnovski/mini.cursorword", version = false, opts = {} },
+  { "echasnovski/mini.ai",         version = false, event = "VeryLazy", opts = {} },
+  { "echasnovski/mini.pairs",      version = false, event = "VeryLazy", opts = {} },
+  { "echasnovski/mini.surround",   version = false, event = "VeryLazy", opts = {} },
+  { "echasnovski/mini.comment",    version = false, event = "VeryLazy", opts = {} },
+  { "echasnovski/mini.move",       version = false, event = "VeryLazy", opts = {} },
+  { "echasnovski/mini.cursorword", version = false, event = "VeryLazy", opts = {} },
   {
     "echasnovski/mini.indentscope",
+    lazy = true,
     version = false,
+    event = "VeryLazy",
     config = function()
       local indentscope = require("mini.indentscope")
       indentscope.setup({
@@ -40,5 +21,4 @@ return {
       })
     end,
   },
-  { "echasnovski/mini.statusline", version = false, opts = {} },
 }

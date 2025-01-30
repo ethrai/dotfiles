@@ -1,5 +1,6 @@
 return {
   'stevearc/oil.nvim',
+  lazy = false,
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {
@@ -11,7 +12,5 @@ return {
       show_hidden = true,
     },
   },
-  -- Optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  lazy = false,
 }

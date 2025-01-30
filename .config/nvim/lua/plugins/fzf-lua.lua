@@ -1,10 +1,9 @@
 return {
   "ibhagwan/fzf-lua",
-  dependencies = { "echasnovski/mini.icons" },
-  lazy = false,
-  priority = 500,
+  dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
+  event = "VeryLazy",
   opts = {
-    "fzf-native",
+    "max-perf",
     winopts = {
       height = 0.9,
       width = 0.9,

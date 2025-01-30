@@ -1,11 +1,13 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = true,
+    event = "VeryLazy",
     opts = {},
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
+    event = "BufEnter",
     dependencies = {
       "williamboman/mason.nvim",
     },

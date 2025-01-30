@@ -1,5 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
+  event = "BufEnter",
   dependencies = {
     {
       "folke/lazydev.nvim",
@@ -12,9 +13,11 @@ return {
     },
     {
       "saghen/blink.cmp",
+      event = "InsertEnter",
     },
     {
       "williamboman/mason-lspconfig.nvim",
+      event = "BufEnter",
     },
   },
   -- Setup servers

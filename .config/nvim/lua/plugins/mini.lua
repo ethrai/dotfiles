@@ -29,7 +29,16 @@ return {
   {
     "echasnovski/mini.indentscope",
     version = false,
-    opts = {},
+    config = function()
+      local indentscope = require("mini.indentscope")
+      indentscope.setup({
+        draw = {
+          animation = require("mini.indentscope").gen_animation.none(),
+        },
+        symbol = "│",
+        options = { try_as_border = true },
+      })
+    end,
   },
   { "echasnovski/mini.statusline", version = false, opts = {} },
 }

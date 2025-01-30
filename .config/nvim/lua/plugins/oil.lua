@@ -1,6 +1,6 @@
 return {
-  'stevearc/oil.nvim',
-  lazy = false,
+  "stevearc/oil.nvim",
+  event = "VimEnter",
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {
@@ -12,5 +12,5 @@ return {
       show_hidden = true,
     },
   },
-  dependencies = { { "echasnovski/mini.icons", opts = {} } },
+  dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
 }

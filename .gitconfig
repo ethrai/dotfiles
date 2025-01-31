@@ -1,0 +1,10 @@
+[user]
+	email = ryzhkosergej@gmail.com
+	name = Sergei Ryzhko
+[safe]
+	directory = /home/ethrai/Cloned/foot
+	directory = /home/ethrai/Cloned/foot
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RF
+[interactive]
+	diffFilter = diff-so-fancy --patch

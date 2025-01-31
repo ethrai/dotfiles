@@ -19,6 +19,7 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::colored-man-pages
 
 # fzf-tab configuration found in https://github.com/Aloxaf/fzf-tab
 # disable sort when completing `git checkout`
